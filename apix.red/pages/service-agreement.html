@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Forex tools - Heat Map</title>
+    <link href="../css/legal-info.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="apix__header-container">
+        <div class="apix__header-logo">
+          <a href="../index.html"><img src="../img/ApixRED.png" alt="logo" /></a>
+          <img class="apix__header__button-burger" src="../img/apix_button_burger.svg" />
+        </div>
+
+        <div class="apix__header-navigation-section">
+          <nav>
+            <ul class="apix__header-navigation">
+              <li><a>Terminal</a></li>
+              <li onclick="showDropdown('#crypto-tools-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Crypto Tools</a>
+                <div id="crypto-tools-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item"><a href="../pages/crypto-market-screener.html">Cryptocurrency market screener</a></li>
+                    
+                  </ul>
+                </div>
+              </li>
+              <li onclick="showDropdown('#forex-tools-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Forex Tools</a>
+                <div id="forex-tools-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item">
+                      <a href="../pages/economic-calendar.html">
+                        Economic Calendar
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="../pages/forex-cross-rates.html">
+                        Forex Cross Rates
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="../pages/forex-heat-map.html">
+                        Forex Heat map
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="../pages/forex-screener.html">
+                        Forex Screener
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li onclick="showDropdown('#integrations-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Integrations</a>
+                <div id="integrations-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item">
+                      <a href="../pages/exchange-integrations.html">
+                        Echange Integrations
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </li>
+              <li><a>Download</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="apix__header-login-section">
+          <div class="apix__header-lk">
+            <a>
+              <div class="apix__header-lk-buttons">Sign up</div>
+            </a>
+            <a>
+              <div class="apix__header-lk-buttons">Log in</div>
+            </a>
+          </div>
+          <div class="apix__header_language-selector">
+            <div class="dropItem dropItem-language">
+              <a href="javascript:void(0);" class="language-box header-item">
+                <span class="header-item__icon"
+                  ><img
+                    src="/img/NKA4lhb38S05wwiuCV_kcmNIPh8PiNuZ.png"
+                    alt="En"
+                    style="border-radius: 2px"
+                /></span>
+                <span class="header-item__name">En</span>
+              </a>
+
+              <div class="dropDown-menu">
+                <a href="/tl" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/xopmnSYgRhYrAFSE336pXE1r3kUU3jBx.png"
+                      alt="Fil"
+                  /></span>
+                  <span class="header-item__name">Fil</span>
+                </a>
+                <a href="/es" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/Hrb5EiNhpi3vFzNFsAJ7emPX5uFOJFx3.png"
+                      alt="Es"
+                  /></span>
+                  <span class="header-item__name">Es</span>
+                </a>
+                <a href="/fr" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/xDnPBX0qFAQXlqnwvEFVnXCINfWYVQzN.png"
+                      alt="Fr"
+                  /></span>
+                  <span class="header-item__name">Fr</span>
+                </a>
+                <a href="/th" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/jr96bnixfewdUOUkNSuddKKrSw2a4N5Q.png"
+                      alt="Th"
+                  /></span>
+                  <span class="header-item__name">Th</span>
+                </a>
+                <a href="/vi" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/5Y2kQUH162CHP9WQyfaBcw3aGvrWt0Wz.png"
+                      alt="Vi"
+                  /></span>
+                  <span class="header-item__name">Vi</span>
+                </a>
+                <a href="/pt" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/QyEa2z7j3uovn4DrGHRhqNox9cbXWc1b.png"
+                      alt="Pt"
+                  /></span>
+                  <span class="header-item__name">Pt</span>
+                </a>
+                <a href="/hi" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/3-75fWScJoWYpAaFsnz1KP7EcWRh2jC5.png"
+                      alt="Hi"
+                  /></span>
+                  <span class="header-item__name">Hi</span>
+                </a>
+                <a href="/id" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/0a6vMRjhAe7PXPD4GxyddJhdog8GbxjC.png"
+                      alt="Id"
+                  /></span>
+                  <span class="header-item__name">Id</span>
+                </a>
+                <a href="/ms" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/gf1-U1f3kcCyQie7UyVU5yAHsMLf6kPf.png"
+                      alt="Ms"
+                  /></span>
+                  <span class="header-item__name">Ms</span>
+                </a>
+                <a href="/ru" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/--iGp57hLbNF7nsdABFqakUL1_Pw_x2n.png"
+                      alt="Ru"
+                  /></span>
+                  <span class="header-item__name">Ru</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <aside>
+      <div class="apix__side-panel__container">
+        <div class="apix__side-panel__main-section">
+          <p>Use e-mail to sign up</p>
+          <input
+            class="apix__side-panel__input"
+            type="email"
+            placeholder="E-mail"
+          />
+          <input
+            class="apix__side-panel__input"
+            type="password"
+            placeholder="Password"
+          />
+          <button class="apix__side-panel__button-ok">Sign up</button>
+          <button class="apix__side-panel__button-google">
+            Log in with Google
+          </button>
+          <div class="apix__side-panel__terms-section">
+            <input class="apix__side-panel__checkbox" type="checkbox" />
+            <p class="apix__side-panel__terms--text">
+              I agree to the
+              <span class="apix__side-panel__terms__text-highlight"
+                >terms & conditions</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="apix__side-panel__follow-us-section">
+          <p>Follow us on</p>
+          <div class="apix__side-panel__socials-section">
+            <a><img src="../img/circle_facebook.png" alt="facebook_icon" /></a>
+            <a><img src="../img/circle_telegram.png" alt="telegram_icon" /></a>
+            <a><img src="../img/circle_youtube.png" alt="youtube_icon" /></a>
+            <a><img src="../img/circle_blank.png" alt="blank_icon" /></a>
+            <a><img src="../img/circle_blank.png" alt="blank_icon" /></a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div class="apix__section-container legal-info__container">
+        <h1 class="apix__header">
+          Legal information
+        </h1>
+        <div class="legal-info__tab-section">
+          <div class="legal-info__tab-item">
+            <a href="private-policy.html" class="legal-info__tab-text">Private Policy</a>
+          </div>
+          <div class="legal-info__tab-item legal-info__active-tab-item">
+            <a href="service-agreement.html" class="legal-info__tab-text">Service Agreement</a>
+          </div>
+          <div class="legal-info__tab-item">
+            <a href="warning-disclaimer.html" class="legal-info__tab-text">Warning Disclaimer</a>
+          </div>
+        </div>
+        <section>
+          <div class="legal-info__text-section">
+            <p class="legal-info__text legal-info__headers">
+              1. GENERAL PROVISIONS AND SUBJECT OF THE AGREEMENT
+            </p>
+            <p class="legal-info__text">
+              1.1 This Service Agreement has been made between G24 OÜ registered at the address Estonia, Tallinn, Lõõtsa tn 5-11, 11415 (hereinafter – Company), and the individual who filled in the registration form on the Company's website and accepted the terms of this Service Agreement and of the appendices hereto at the moment of registration (hereinafter – Client). The Payment Agent(s) that the Company hires to carry out non-trading transactions under this Agreement is also a Party (Parties) to this Agreement. The Company, Payment Agent(s), and Client are jointly referred to as "Parties."
+            </p>
+            <p class="legal-info__text">
+              1.2 The following documents are an integral part of this Service Agreement (annexes to this Service Agreement):
+            </p>
+            <ol class="legal-info__ol__lettered legal-info__text">
+              <li>A. Risk disclosure;</li>
+              <li>B. Privacy policy</li>
+              <li>C. Other documents posted on the Company’s website</li>
+            </ol>
+            <p class="legal-info__text">
+              The Company may unilaterally alter the list, name, and content of annexes to this Agreement. The Company may add new annexes to the Agreement or delete existing ones without making any amendments to this clause.
+            </p>
+            <p class="legal-info__text">
+              The text of the Service Agreement and of the annexes to it is referred to as the Agreement.
+            </p>
+            <p class="legal-info__text">
+              1.3 The Agreement is an offer posted on the Company’s website that must be treated as an offer to enter into this Agreement on the terms set forth in it. The posted offer is not public. The Company at its sole discretion may refuse to enter into an Agreement with anyone without explaining the reasons for refusal or, if registration took place, to terminate contractual relations and to block access to the trading terminal. The Client's registration on the Company's website or on the trading terminal is considered to be unconditional acceptance of the terms hereof.
+            </p>
+            <p class="legal-info__text">
+              1.4 The Client must carefully review the terms of the Agreement. By accepting the terms of this Agreement, the Client agrees to the terms of all its annexes listed above, confirms that he or she is of legal age, legally competent.
+            </p>
+            <p class="legal-info__text">
+              The Client also represents and warrants to the Company that:
+            </p>
+            <p class="legal-info__text">
+              1.4.1 All information provided during Client registration and during the performance of Agreement, is true, accurate, reliable, and complete in all respects, and the Client completed the registration form him/herself;
+            </p>
+            <p class="legal-info__text">
+              1.4.2 The Client has the powers necessary to enter into the Agreement, to submit requests and give orders, and to fulfill his/her obligations pursuant to the terms of the Agreement;
+            </p>
+            <p class="legal-info__text">
+              1.4.3 The Client will adhere to legal norms, in particular, international norms aimed at controlling illegal trade, financial fraud, and money laundering;
+            </p>
+            <p class="legal-info__text">
+              1.4.4 The Client will not use the trading terminal or website to collude in illegal financial activities or any other illegal transaction;
+            </p>
+            <p class="legal-info__text">
+              1.4.5 The money listed by the Client on the Company's account has a legal origin. The Client legally possesses the money and has the right to use it. The Client's account will not be replenished from third-party bank accounts or electronic wallets. The Client will not replenish third party client accounts or withdraw money from the Client's account to third party bank accounts or electronic wallets.
+            </p>
+            <p class="legal-info__text">
+              1.4.6 No actions of the Client pursuant to the Agreement will violate any law, regulation, right, bylaws, or rules and regulations applicable to the Client or in the jurisdiction where he/she resides or the provisions of any other agreement binding on the Client or involving any assets of the Client.
+            </p>
+            <p class="legal-info__text">
+              1.4.7 In carrying out transactions, the Client will use devices he/she owns and connect to the trading platform using communications channels and equipment belonging and registered to the Client (including telephone numbers, IP addresses, etc.). The Client will not use third-party devices, anonymizers, or other third-party devices and equipment or devices and equipment that make it possible to conceal the Client's real IP address, its true location, and the point of connection to the trading platform.
+            </p>
+            <p class="legal-info__text">
+              1.4.8 The Client is not a federal or municipal civil servant, an employee of a national or municipal institution, an employee of a national or municipal organization, an organization in which the state owns a majority stake. The Client is not a politically exposed person or a family member or relative of a politically exposed person. The Client is not a person closely linked to a politically exposed person. The Client is not a person linked to the United States or other state in which the Company does not operate. The Company construes and uses the terms used in this clause independently at its discretion pursuant to the norms of international law and/or the laws of a particular country, generally accepted terms and definitions, and ordinary business customs.
+            </p>
+            <p class="legal-info__text legal-info__headers">
+              2. TERMS AND DEFINITIONS
+            </p>
+            <p class="legal-info__text">
+              2.1 The product is a trading terminal, which is one of the client components of the ApixRED Trading platform and is designed for trading through a web interface using a web browser. Access to the Product is carried out remotely via the Internet. The product is an online software application available online at www.apix.red. The use of the Product is possible through the user's interaction with the Product on the Internet with the existing web interface and functionality, as well as with changes to the interface and functionality that can be made subsequently. The product is a trader's workplace and makes it possible to trade on the financial markets through the mediation of Financial Institutions with which the trader enters into a contractual relationship, having a valid account and a trading account. The product is the property of G24 OÜ.
+            </p>
+            <p class="legal-info__text">
+              2.2 Company Website – an internet site at the address (domain name) apix.red, and other internet sites which the Company references in the Agreement or on the Company Website.
+            </p>
+            <p class="legal-info__text">
+              2.3 Company's Account – the Company's settlement account at a financial institution, an account (wallet) in an electronic payment system, and other accounts, including accounts of Payment Agents.
+            </p>
+            <p class="legal-info__text">
+              2.4 G24 OÜ Software means the software of the Trading platform ApixRED developed and owned by G24 OÜ  under the registered trademark Trading platform ApixRED, together with any improvements, updates, changes, modifications, additions, new versions, and related subsystems, parts, services, and their components, including, but not limited to, server and client components of the trading platform, server API (Server API/Manager API), relevant secure network data transfer protocols, databases, software user interface, documentation, Product and its components, and the online services and G24 OÜ  Websites associated with the Trading platform ApixRED.
+            </p>
+            <p class="legal-info__text">
+              2.5 Payment service provider - a company that provides funds transfer services.
+            </p>
+            <p class="legal-info__text">
+              2.6 Company's Account – the Company's settlement account at a financial institution, an account (wallet) in an electronic payment system, and other accounts, including accounts of Payment Agents.
+            </p>
+            <p class="legal-info__text">
+              2.7 Cookie file - a small data set including an anonymous unique identifier which is sent to the web browser of the Client's computer or mobile telephone (hereinafter "device") from the Company server (website) and is stored on the hard disk of the Client's computer. The Client may configure a web browser to block cookie access to the computer. When a Client visits the Company Website, the viewed pages and cookie files are downloaded onto the hard drive of the Client's device. Cookie files stored on the hard drive may be used for anonymous identification if the Client revisits the Company's website and to determine the website pages that are the most popular among our Clients. However, for confidentiality and security, the Company does not store Client personal data (including name, personal information, email address, etc.). Cookie files stored on the hard drive of the Client's device enable the company to create the most user-friendly and efficient website for Company Clients, providing us an opportunity to identify our Clients' preferences
+            </p>
+            <p class="legal-info__text legal-info__headers">
+              3. COMMUNICATIONS AND PROVISION OF INFORMATION
+            </p>
+            <p class="legal-info__text">
+              3.1 To communicate with the Client, the Company may use:
+            </p>
+            <ul class="legal-info__text legal-info__ul">
+              <li>e-mail;</li>
+              <li>fax;</li>
+              <li>telephone;</li>
+              <li>SMS;</li>
+              <li>letters sent by post;</li>
+              <li>different types of messages sent to the Client on the trading terminal, in the Dashboard, browser window, etc. (push notifications, reminders, service messages, etc.) (push-notices, reminders, service messages, etc.);</li>
+              <li>announcements on the Company website.</li>
+            </ul>
+            <p class="legal-info__text">
+              3.2 To promptly communicate with the Client to resolve problems related to Client transactions, the Company will use the Client's contact information entered when the Client registered.
+            </p>
+            <p class="legal-info__text">
+              3.3 Any correspondence (documents, notices, confirmations, announcements, reports, etc.) are deemed received by the Client:
+            </p>
+            <p class="legal-info__text">
+              <ul class="legal-info__ul legal-info__text">
+                <li>one (1) hour after they are sent to the email address (e-mail);</li>
+                <li>immediately after they are faxed;</li>
+                <li>immediately after the telephone call ends;</li>
+                <li>immediately after an SMS message is sent;</li>
+                <li>seven(7) calendar days after they are mailed;</li>
+                <li>immediately after an announcement is posted on the Company website.</li>
+              </ul>
+            </p>
+            <p class="legal-info__text">
+              3.4 The Client may also contact the Company by email at support@, other email addresses, and the telephone numbers listed in this Agreement and on the Company website.
+            </p>
+            <p class="legal-info__text">
+              3.5 The Client understands and agrees that, if the Client's behavior during conversations with a Company employee is inappropriate, the Company reserves the right to unilaterally terminate this Agreement.
+            </p>
+            <p class="legal-info__text">
+              3.6 The Company may use the contact information provided by the Client to send informational, marketing, and advertising materials, and service messages and to resolve other tasks. The Company will determine the frequency with which it sends messages to the Client at its sole discretion. If the Client wishes not to receive informational (and other) messages from the Company, he/she must unsubscribe by clicking on the Unsubscribe link (if the message format provides this ability) or by contacting the client support department.
+            </p>
+            <p class="legal-info__text legal-info__headers">
+              4. TERMS OF USE OF THE COMPANY'S SERVICES
+            </p>
+            <p class="legal-info__text">
+              4.1 Upon registration, the Client undertakes to provide correct and reliable information for the identification of a person in accordance with the requirements of the Customer registration form.
+            </p>
+            <p class="legal-info__text">
+              4.2 You acknowledge and agree that any and all Intellectual Property Rights relating to the Product, G24 OÜ Software, any G24 OÜ Website, G24 OÜ Online Materials and G24 OÜ Advertising Materials are and shall be solely owned by G24 OÜ. Nothing in this Agreement shall be construed as conferring such Intellectual Property Rights on You.
+            </p>
+            <p class="legal-info__text">
+              This Agreement grants you a limited right to use the Product. You agree not to take any action that could jeopardize or result in an infringement or limitation of the Intellectual Property Rights. You acknowledge and agree that any unauthorized use of the Intellectual Property Rights is a violation of this Agreement and a violation of international intellectual property laws, including, but not limited to, copyright and trademark laws.
+            </p>
+            <p class="legal-info__text">
+              All ownership rights and Intellectual Property Rights in relation to content owned by third parties that are not contained in the G24 OÜ Software, but can be accessed through the use of the G24 OÜ Software, belong to the owners of such content, and may be protected by relevant copyright laws and other intellectual property laws. This provision shall survive termination of this Agreement.
+            </p>
+            <p class="legal-info__text">
+              4.3 With respect to the  Trading platform ApixRED Software, you agree not to reverse engineer, decompile, disassemble or otherwise modify the  Trading platform ApixRED or any part thereof, or engage in any other such manipulation without the prior written consent of G24 OÜ. You agree not to undertake, facilitate or permit, knowingly or unknowingly, modifications of the Trading platform ApixRED Software, translation into other languages, creation of similar products or services, reverse engineering, decryption, decompilation, and/or disassembly of the Trading platform ApixRED Software and any of its components, unauthorized access to databases and network protocols, as well as violation of the integrity of the Trading platform ApixRED Software security system. 
+            </p>
+            <p class="legal-info__text legal-info__headers">
+              5. CLAIMS AND DISPUTE RESOLUTION AND REFUND
+            </p>
+            <p class="legal-info__text">
+              5.1 The Parties have agreed that they will make every effort to settle all disputes between the Company and the Client.
+            </p>
+            <p class="legal-info__text">
+              5.2 If a dispute arises, the Client may submit a claim/complaint to the Company and send a statement or notice to the Company. All claims/complaints/statements/notices related to transactions performed by the Client must be submitted in accordance with the following requirements:
+            </p>
+            <p class="legal-info__text">
+              5.2.1 claims/complaints/statements/notices must be submitted in writing;
+            </p>
+            <p class="legal-info__text">
+              5.2.2 claims/complaints/statements/notices must contain the following information: Surname, first name, middle name (if any), Client’s e-mail, date and time of the dispute, a brief description of the dispute, Client’s demands; claimed amount and justified calculation thereof (if the claim can be valued in money); circumstances that are the grounds for the claim and evidence supporting those circumstances, including reference to the clause of this Agreement (annexes hereto) that were breached in the Client’s opinion; a list of documents and other evidence attached to the claim (complaint) authenticated by the Client; other information necessary to settle the dispute;
+            </p>
+            <p class="legal-info__text">
+              5.2.3 claims/complaints/statements/notices must be sent by the Client within five (5) business days after the event that was the basis for submission of the relevant claim (complaint). The Client agrees that a delay in submission of the claim (complaint) is grounds for a refusal to consider it;
+            </p>
+            <p class="legal-info__text">
+              5.2.4 claims/complaints/statements/notices may be sent by e-mail to support@, by registered or certified mail, or by other means of communication that provide a record that they were sent (including fax) or may be hand-delivered with acknowledgment of receipt signed by the recipient. Claims/complaints/statements/notices made and sent in another form will not be considered.
+            </p>
+            <p class="legal-info__text">
+              5.3 Claims/complaints/statements/notices must not contain:
+            </p>
+            <p class="legal-info__text">
+              <ol class="legal-info__ol__lettered legal-info__text-style">
+                <li>A. an emotional evaluation of the dispute;</li>
+                <li>B. offensive statements addressed to the Company;</li>
+                <li>C. profanity.</li>
+              </ol>
+            </p>
+            <p class="legal-info__text">
+              5.4 To respond to a claim/complaint/statement/notice, the Company may request additional documents and information from the Client. A claim/complaint/statement/notice will be reviewed on the basis of data provided by the Client and log entries from the Company server. Log entries from the Company Server always prevail over other evidence and proof. The Company assumes no liability for incomplete trades and will not compensate any financial damages or moral harm suffered by the Client with respect to what the Client considers to be lost profit. When considering disputes, the Company will not take into account the Client’s references to information from other companies and websites.
+            </p>
+            <p class="legal-info__text">
+              5.5 The Company may reject a claim/complaint/statement/notice if the terms of this section are violated.
+            </p>
+            <p class="legal-info__text">
+              5.6 The Company will revise a claim/complaint/statement /notice within 5 business days after submission.
+            </p>
+            <p class="legal-info__text">
+              5.7 In addition to the provision set out in paragraphs 5.2-5.7 of the dispute resolution procedure, the Client may file a claim with the court, provided that he has previously filed a claim with the Company in accordance with this dispute resolution procedure.
+            </p>
+            <p class="legal-info__text">
+              The claim procedure for resolving a dispute is considered to be observed if:
+            </p>
+            <p class="legal-info__text">
+              <ol class="legal-info__ol__lettered legal-info__text-style">
+                <li>A. the form and content of the claim comply with the requirements of paragraphs 5.2.1, 5.2.2, and 5.2.3;</li>
+                <li>B. the claim is sent to the registered address of the Company;</li>
+                <li>C. the Client has confirmation of receipt of the claim by the Company;</li>
+                <li>D. the deadline for responding to the claim has not expired. The deadline for responding to a claim is 60 (sixty) calendar days from the date of its receipt by the Company.</li>
+              </ol>
+            </p>
+            <p class="legal-info__text">
+              5.8 In case of any disputes, the Company reserves the right to fully or partially block transactions in the Client's Account until the dispute is settled or until the Parties come to an interim agreement.
+            </p>
+            <p class="legal-info__text">
+              5.9 We issue refunds for digital products within 15 days of the original purchase of the product. We recommend contacting us for assistance if you experience any issues receiving or downloading our products.
+            </p>
+            <p class="legal-info__text">
+              If you have any questions about our Returns and Refunds Policy, please contact us:
+            </p>
+            <p class="legal-info__text">
+              By email: support@ 
+            </p>
+            <p class="legal-info__text legal-info__headers">
+              6. GOVERNING LAW
+            </p>
+            <p class="legal-info__text">
+              6.1 This Agreement is concluded in the Russian Federation (hereinafter country of Company registration) and is governed by the legislation of the country of the Company's registration. The services hereunder are rendered in the country of the Client’s registration.
+            </p>
+            <p class="legal-info__text">
+              6.2 The Client expressly:
+            </p>
+            <p class="legal-info__text">
+              <ol class="legal-info__ol__lettered legal-info__text-style">
+                <li>A. agrees that the courts of the country of the Company’s registration have exclusive jurisdiction to conduct any legal proceedings with B.</li>
+                <li>C. submits to the jurisdiction of the courts of the country of the Company’s registration;</li>
+                <li>D. waives any appeals with respect to proceedings in any of such courts;
+                  agrees to make no claims regarding forum non-conveniens and not to declare that the forum state has no legal jurisdiction over the Client.</li>
+              </ol>
+            </p>
+            <p class="legal-info__text legal-info__headers">
+              7. FORCE MAJEURE
+            </p>
+            <p class="legal-info__text">
+              7.1 If it has reasonable grounds, the Company is entitled to claim the occurrence of force majeure events. The Company must take proper steps to inform the Client about the occurrence of the force majeure events. Force majeure events include (but are not limited to):
+            </p>
+            <p class="legal-info__text">
+              <ol class="legal-info__ol__lettered legal-info__text-style">
+                <li>
+                  A. any action, event, or phenomenon (including, but not limited to, any strike, mass rioting or civil unrest, terrorist attacks, wars, natural disasters, accidents, fires, floods, storms, blackouts, communication, software or electronic equipment failures, malfunctions in any type of hardware or software, instability in the quote feed, any interruptions or failures in the liquidity provider service, etc.) that, in the reasonable opinion of the Company, resulted in destabilization of the market or markets for one or several assets (instruments);
+                </li>
+                <li>
+                  B. suspension, liquidation, or closure of any market or the absence of any event on which the Company basis quotes, or the imposition of limits or special or non-standard trade conditions in any market or with respect to any such event.
+                </li>
+              </ol>
+            </p>
+            <p class="legal-info__text">
+              7.2 If the Company establishes a force majeure event, the Company may (without prejudice to other rights of the Company) take any of the following actions without prior written notice and at any time:
+            </p>
+            <p class="legal-info__text">
+              A. suspend or alter the application of one or all provisions of the Agreement during which the force majeure event makes it impossible for the Company to fulfill such provisions;<br />
+              B. perform or, vice versa, not perform any actions with respect to the Company, the Client, and other clients if the Company finds it reasonable in these circumstances on sufficient grounds.
+            </p>
+            <p class="legal-info__text">
+              7.3 The Company assumes no liability for breach (improper discharge) of obligations if force majeure events interfered with that discharge.
+            </p>
+            <p class="legal-info__text legal-info__headers">
+              8. LIABILITY OF THE PARTIES
+            </p>
+            <p class="legal-info__text">
+              8.1 The liability of the Parties hereto is determined by terms of the Agreement and of its annexes.
+            </p>
+            <p class="legal-info__text">
+              8.2 The Company assumes liability only for real damages caused to the Client as a result of the Company's deliberate breach of its obligations hereunder. The Company is as responsible for the actions of its employees, departments, and payment agents as it is for its own actions.
+            </p>
+            <p class="legal-info__text">
+              8.3 The Client assumes liability to the Company for damages incurred by the Company through the Client’s fault.
+            </p>
+            <p class="legal-info__text">
+              8.4 The Company assumes no liability to the Client for any damages, losses, lost profit, lost opportunities (due to possible market fluctuations), expenses, or damages incurred by the Client as a result of the use of information provided by the Company.
+            </p>
+            <p class="legal-info__text legal-info__headers">
+              9. TERM AND TERMINATION OF THE AGREEMENT
+            </p>
+            <p class="legal-info__text">
+              9.1 This Agreement comes into force upon its conclusion (client registration on the website) and will be valid in perpetuity.
+            </p>
+            <p class="legal-info__text">
+              9.2 Either Party may terminate this Agreement unilaterally:
+            </p>
+            <p class="legal-info__text">
+              9.2.1 The Agreement is considered terminated on the initiative of the Company as of the date specified in the notice sent by the Company to the Client;
+            </p>
+            <p class="legal-info__text">
+              9.2.2 The Agreement is considered terminated at the initiative of the Client five (5) business days after the Company receives the Client’s written notice containing the statement of termination of the Agreement, provided the Client has no unfulfilled obligations hereunder. The Client must send the Termination Notification to the email address support@.
+            </p>
+            <p class="legal-info__text legal-info__headers">
+              10. FINAL PROVISIONS
+            </p>
+            <p class="legal-info__text">
+              10.1 Amendments and supplements to this Agreement and to its annexes hereto will be made by the Company unilaterally. All amendments and supplements made by the Company and not related to the circumstances specified herein come into force on the date specified by the Company.
+            </p>
+            <p class="legal-info__text">
+              10.2 Amendments and supplements made by the Company to this Agreement and to its annexes because of amendments to legislation and regulations governing the subject hereof and to rules and contracts of trading systems used by the Company to discharge its obligations hereunder come into force simultaneously with amendments in the aforementioned documents.
+            </p>
+            <p class="legal-info__text">
+              10.3 When the amendments and supplements made by the Company come into force, they will apply equally to all Clients, including those who concluded the Agreement before their effective date.
+            </p>
+            <p class="legal-info__text">
+              10.4 To ensure that a Client who entered into the Agreement is aware of amendments and supplements before they come into force, the Client must visit the Company's Website him/herself or through authorized persons at least once a week to find information about any amendments and/or supplements.
+            </p>
+            <p class="legal-info__text">
+              10.5 The Client (individual) providing his/her personal data to the Company in any form and in any way (when performing any actions on the Company’s website, through the Company’s counterparties, etc.) thereby gives the Company and its partners his/her consent for automated and non-automated processing of his/her personal data for the purpose of the fulfillment of this Agreement, the implementation of advertising campaigns, provision to him/her of advertising, informational, and marketing materials, information about campaigns and events held by the Company, and for other purposes determined by the Company, namely: to collect, record, systematize, accumulate, store, adjust (update, amend), extract, transfer (disseminate, grant access), depersonalize, block, delete, destroy and transfer across borders personal data. Consent is given for a period of 75 years (or until the expiry of the retention periods for the relevant information or documents containing that information determined in accordance with the current legislation of the Company's location). Consent may be withdrawn in accordance with legislation by sending a statement to the Company’s location. Contact information is posted on the Company’s Website. The Company guarantees the confidentiality of the personal data provided by the Client, excluding the circumstances set by the applicable law and force majeure.
+            </p>
+            <p class="legal-info__text">
+              10.6 The Client may use information that was communicated to the Client either orally or in writing that is posted by the Company or by third parties, access to which was granted to him/her as part of the services hereunder only for transactions under this Agreement. The Client may not disseminate, alter, or supplement the aforementioned information, or store it in separate archives. In any event, the scope of powers granted to the Client with respect to information posted by third parties cannot exceed the scope of powers obtained by the Company from the third party. The Company does not guarantee that information posted by third parties is reliable, accurate, or relevant and will be provided on an ongoing basis without interruptions. Nor is the Company liable for the results of transactions (losses, lost profit, lost income, injury to goodwill, etc.) that the Client decided to perform on the basis of information that was communicated to the Client either orally or in writing by the Company or by third parties.
+            </p>
+            <p class="legal-info__text">
+              10.7 The Company may fully or partially transfer the rights and obligations under this Agreement and the annexes hereto to a third party if such person undertakes to fulfill the terms hereof. This transfer of rights and obligations will come into force 10 business days after the day when the Client is deemed to have received the relevant notice pursuant to the provisions of this Agreement.
+            </p>
+            <p class="legal-info__text">
+              10.8 The Client is not entitled to assign his/her own rights, impose his/her own obligations or transfer rights or obligations hereunder in any other way without the prior written consent of the Company. If this condition is breached, any such assignment, imposition, or transfer will be deemed null and void.
+            </p>
+            <p class="legal-info__text">
+              10.9 The Client agrees and authorizes the Company to act with respect to the Client and for the Client, as the Company finds appropriate, despite a potential conflict of interests or the existence of some material interest with respect to any transaction on the trading terminal or in the Dashboard without prior notification of the Client. The existence of a conflict of interest or material benefit with respect to any transaction on the trading terminal or in the Dashboard must not affect the provision of services to the Client by Company employees. From time to time the Company may act on behalf of the Client with parties with whom the Company or any of its related parties have an agreement to receive goods or services. The Company guarantees that these agreements are made as far as possible for the benefit of the Client, for example, these agreements make it possible to access information and other services that would otherwise be inaccessible.
+            </p>
+            <p class="legal-info__text">
+              10.10 If a court of proper jurisdiction declares any provision of the Agreement (or any part of any provision) void, that provision will be treated as a separate part of the Agreement and this will not affect the legal force of the rest of the Agreement.
+            </p>
+            <p class="legal-info__text">
+              10.11 The Company may suspend services to the Client at any time (prior notice to the Client is not required).
+            </p>
+            <p class="legal-info__text">
+              10.12 In situations not described in the Agreement, the Company will act according to market best practices based on principles of honesty and fairness.
+            </p>
+            <p class="legal-info__text">
+              10.13  The Company may prepare and use texts of the Agreement and its annexes in languages other than English. If there are contradictions between the text of this Agreement and its annexes in English and the corresponding texts in other languages, the text in English will prevail. The text of the Agreement published on the Company website prevails over the text of the Agreement published elsewhere.
+            </p>
+            <p class="legal-info__text">
+              10.14 No warranty. Client agrees that  G24 OÜ MAKES  not a warranty of any kind regarding the product, WHICH ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND;<br /> 
+G24 OÜ refuses all the above-mentioned guarantees, conditions, or applications regarding the product and software, including (but not limited to) any guarantees or quality conditions, performance, impregnation of rights, commercial condition, as well as acceptability for use with a specific purpose.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="apix__footer-container">
+        <div class="apix__footer__logo-section">
+          <a><img src=".../img/ApixRED.png" alt="apix_logo" /></a>
+          <div class="apix__footer__logo-section__socials-section">
+            <a><img src="../img/facebook.png" alt="facebook_icon" /></a>
+            <a><img src="../img/twitter.png" alt="twitter_icon" /></a>
+            <a><img src="../img/youtube.png" alt="youtube_icon" /></a>
+          </div>
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Legal information</p>
+          <a href="/service-agreement.html">Service Agreement</a>
+          <a href="/private-policy.html">Private Policy</a>
+          <a href="/warning-disclaimer.html">Warning Disclaimer</a>
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Crypto tools</p>
+          <a href="/crypto-market-screener.html"
+            >Cryptocurrency Market Screener</a
+          >
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Forex tools</p>
+          <a href="/economic-calenar.html">Economic Calendar</a>
+          <a href="/forex-cross-rates.html">Forex Cross Rates</a>
+          <a href="/forex-heat-map.html">Forex Heat Map</a>
+          <a href="/forex-screener.html">Forex Screener</a>
+          <a href="/market-alerts.html">Market alerts</a>
+        </div>
+        <div class="apix__footer__sections apix__footer__for-users-section">
+          <p class="apix__footer__sections--header">For users</p>
+          <a href="/economic-calenar.html">support@apixred.com</a>
+          <a href="/forex-cross-rates.html">Mobile App</a>
+          <a href="/forex-heat-map.html">Blog</a>
+          <a href="/forex-screener.html">Pricing</a>
+          <a href="/market-alerts.html">Affiliate program</a>
+        </div>
+      </div>
+      <div class="apix__copyright-section">
+        <p>RISK WARNING</p>
+        <p>
+          Binary options trading is associated with a high risk of capital loss.
+          Please, read the full version of the risk warning.
+        </p>
+        <p class="apix__copyright-section__below-section">
+          © 2013 - 2022, X-systems & services PC
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous" 
+    ></script>
+    <script src="../js/dropdown.js"></script>
+  </body>
+</html>

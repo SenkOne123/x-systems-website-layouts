@@ -1,0 +1,123 @@
+@import "./footer.css";
+@import "./header.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Benzin-Bold";
+  src: url("../fonts/benzin-bold.ttf");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter.ttf");
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+body {
+  font-family: "Inter";
+  background: #232439;
+}
+body::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: fixed;
+  background: url("../img/legal-info_bg-right.svg") repeat-y right, url("../img/legal-info_bg-left.svg") repeat-y left, #232439;
+  z-index: -1;
+}
+.legal-info__header {
+  font-family: "Benzin-Bold";
+  font-size: 45px;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 87px;
+  margin-bottom: 60px;
+  text-shadow: 0 0 3px #fff;
+}
+
+.tabs__section {
+  width: 46%;
+  margin: 0 auto;
+}
+.tabs__list {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.tabs__list--item {
+  cursor: pointer;
+  background: #2d2f48;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 4px 9px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 35px;
+  justify-content: center;
+}
+.tabs__active {
+  color: #222335;
+  box-shadow: inset 0px 3px 2px 1px rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+.legal-info-container {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  width: 46%;
+  margin: 0 auto;
+}
+.legal-info__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.legal-info__text-gap {
+  margin-top: 24px;
+}
+.legal-info__links {
+  color: #3535ff;
+}
+@media screen and (max-width: 1440px) {
+  .tabs__list--item {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 12vw;
+  }
+  body::before {
+    background: #232439;
+  }
+  .legal-info__text {
+    font-size: 14px;
+  }
+  .tabs__list--item {
+    margin-top: 10px;
+    width: 80%;
+  }
+  .tabs__list {
+    gap: 0;
+    justify-content: center;
+  }
+  .tabs__section {
+    width: 90%;
+  }
+  .legal-info-container {
+    width: 90%;
+  }
+}

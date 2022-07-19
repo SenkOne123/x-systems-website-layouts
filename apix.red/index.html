@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Apix RED</title>
+    <link href="./css/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="apix__header-container">
+        <div class="apix__header-logo">
+          <img src="./img/ApixRED.png" alt="logo" />
+          <img class="apix__header__button-burger" src="./img/apix_button_burger.svg" />
+        </div>
+
+        <div class="apix__header-navigation-section">
+          <nav>
+            <ul class="apix__header-navigation">
+              <li><a>Terminal</a></li>
+              <li onclick="showDropdown('#crypto-tools-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Crypto Tools</a>
+                <div id="crypto-tools-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item"><a href="./pages/crypto-market-screener.html">Cryptocurrency market screener</a></li>
+                    
+                  </ul>
+                </div>
+              </li>
+              <li onclick="showDropdown('#forex-tools-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Forex Tools</a>
+                <div id="forex-tools-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item">
+                      <a href="./pages/economic-calendar.html">
+                        Economic Calendar
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="./pages/forex-cross-rates.html">
+                        Forex Cross Rates
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="./pages/forex-heat-map.html">
+                        Forex Heat map
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="./pages/forex-screener.html">
+                        Forex Screener
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li onclick="showDropdown('#integrations-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Integrations</a>
+                <div id="integrations-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item">
+                      <a href="./pages/exchange-integrations.html">
+                        Echange Integrations
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </li>
+              <li><a>Download</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="apix__header-login-section">
+          <div class="apix__header-lk">
+            <a>
+              <div class="apix__header-lk-buttons">Sign up</div>
+            </a>
+            <a>
+              <div class="apix__header-lk-buttons">Log in</div>
+            </a>
+          </div>
+          <div class="apix__header_language-selector">
+            <div class="dropItem dropItem-language">
+              <a href="javascript:void(0);" class="language-box header-item">
+                <span class="header-item__icon"
+                  ><img
+                    src="/img/NKA4lhb38S05wwiuCV_kcmNIPh8PiNuZ.png"
+                    alt="En"
+                    style="border-radius: 2px"
+                /></span>
+                <span class="header-item__name">En</span>
+              </a>
+
+              <div class="dropDown-menu">
+                <a href="/tl" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/xopmnSYgRhYrAFSE336pXE1r3kUU3jBx.png"
+                      alt="Fil"
+                  /></span>
+                  <span class="header-item__name">Fil</span>
+                </a>
+                <a href="/es" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/Hrb5EiNhpi3vFzNFsAJ7emPX5uFOJFx3.png"
+                      alt="Es"
+                  /></span>
+                  <span class="header-item__name">Es</span>
+                </a>
+                <a href="/fr" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/xDnPBX0qFAQXlqnwvEFVnXCINfWYVQzN.png"
+                      alt="Fr"
+                  /></span>
+                  <span class="header-item__name">Fr</span>
+                </a>
+                <a href="/th" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/jr96bnixfewdUOUkNSuddKKrSw2a4N5Q.png"
+                      alt="Th"
+                  /></span>
+                  <span class="header-item__name">Th</span>
+                </a>
+                <a href="/vi" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/5Y2kQUH162CHP9WQyfaBcw3aGvrWt0Wz.png"
+                      alt="Vi"
+                  /></span>
+                  <span class="header-item__name">Vi</span>
+                </a>
+                <a href="/pt" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/QyEa2z7j3uovn4DrGHRhqNox9cbXWc1b.png"
+                      alt="Pt"
+                  /></span>
+                  <span class="header-item__name">Pt</span>
+                </a>
+                <a href="/hi" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/3-75fWScJoWYpAaFsnz1KP7EcWRh2jC5.png"
+                      alt="Hi"
+                  /></span>
+                  <span class="header-item__name">Hi</span>
+                </a>
+                <a href="/id" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/0a6vMRjhAe7PXPD4GxyddJhdog8GbxjC.png"
+                      alt="Id"
+                  /></span>
+                  <span class="header-item__name">Id</span>
+                </a>
+                <a href="/ms" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/gf1-U1f3kcCyQie7UyVU5yAHsMLf6kPf.png"
+                      alt="Ms"
+                  /></span>
+                  <span class="header-item__name">Ms</span>
+                </a>
+                <a href="/ru" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/--iGp57hLbNF7nsdABFqakUL1_Pw_x2n.png"
+                      alt="Ru"
+                  /></span>
+                  <span class="header-item__name">Ru</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <aside>
+      <div class="apix__side-panel__container">
+        <div class="apix__side-panel__main-section">
+          <p>Use e-mail to sign up</p>
+          <input
+            class="apix__side-panel__input"
+            type="email"
+            placeholder="E-mail"
+          />
+          <input
+            class="apix__side-panel__input"
+            type="password"
+            placeholder="Password"
+          />
+          <button class="apix__side-panel__button-ok">Sign up</button>
+          <button class="apix__side-panel__button-google">
+            Log in with Google
+          </button>
+          <div class="apix__side-panel__terms-section">
+            <input class="apix__side-panel__checkbox" type="checkbox" />
+            <p class="apix__side-panel__terms--text">
+              I agree to the
+              <span class="apix__side-panel__terms__text-highlight"
+                >terms & conditions</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="apix__side-panel__follow-us-section">
+          <p>Follow us on</p>
+          <div class="apix__side-panel__socials-section">
+            <a><img src="./img/circle_facebook.png" alt="facebook_icon" /></a>
+            <a><img src="./img/circle_telegram.png" alt="telegram_icon" /></a>
+            <a><img src="./img/circle_youtube.png" alt="youtube_icon" /></a>
+            <a><img src="./img/circle_blank.png" alt="blank_icon" /></a>
+            <a><img src="./img/circle_blank.png" alt="blank_icon" /></a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section>
+        <div class="main__h1-section">
+          <div class="main__text-section">
+            <div>
+              <h2 class="main__h2">Trading terminal</h2>
+              <h1 class="main__h1">ApixRED</h1>
+            </div>
+            <div class="main__h1-section__button">Start in one click</div>
+          </div>
+          <div class="h1__pics-section">
+            <img class="main-terminal-pic" src="./img/main-terminal-pic.svg" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="main__download-section">
+          <div class="main__text-section">
+            <div class="main__text-section--text">
+              <p class="main__heading-text">
+                <span class="main__text-headers">We are not a broker,</span>
+              </p>
+              <p class="main__text">we trading terminal place</p>
+              <p class="main__little-text main__little-gap">
+                Trade orders with your eExchange
+              </p>
+            </div>
+            <div class="main__h1-section__button main__download-button">
+              <img
+                class="main__download-icon"
+                src="./img/main_download-icon.png"
+              />
+              <p>Download for free</p>
+            </div>
+          </div>
+          <img class="main__trading-panel-pic" src="./img/trading-panel.png" />
+          <img class="main__trading-panel-pic--mobile" src="./img/download_pic_mobile.svg" />
+          <img class="main__trading-panel--elipse" src="./img/main_red-ellipse.svg" />
+        </div>
+      </section>
+      <section>
+        <div class="main__more-info-section">
+          <div class="main__more-info__text-section">
+            <p class="main__heading-text">
+              <span class="main__red-text">ApixRED </span
+              ><span class="main__text-headers">is a trading terminal</span>
+            </p>
+            <p class="main__text">for the cryptocurrency and forex markets</p>
+          </div>
+          
+          <div class="main__colored-squares-section">
+            <div
+              class="main__colored-squares--item main__colored-squares--first-item"
+            >
+              <p class="main__colored-squares__item-header">Market Analysis</p>
+              <p class="main__colored-squares__item-text">
+                Analyze and make forecasts based on trading signals, indicators,
+                and heat maps
+              </p>
+            </div>
+            <div
+              class="main__colored-squares--item main__colored-squares--second-item"
+            >
+              <p class="main__colored-squares__item-header">Automatic orders</p>
+              <p class="main__colored-squares__item-text">
+                Make trading easier, open trades in one click with take profit
+                and stop loss presets
+              </p>
+            </div>
+            <div
+              class="main__colored-squares--item main__colored-squares--third-item"
+            >
+              <p class="main__colored-squares__item-header">Additional tools</p>
+              <p class="main__colored-squares__item-text">
+                Use all the features of the trading terminal for trading
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="main__more-download-section">
+          <p class="main__text">
+            <span class="main__text-headers"
+              >Discover the world of trading</span
+            >
+            <br />
+            with the most user-friendly
+            <br />
+            <span class="main__red-text">ApixRED</span> trading terminal
+          </p>
+          <div>
+            <div class="main__download--sections-gap main__download__computer-section">
+              <p class="">Download ApixRED for computer</p>
+              <div
+                class="main__download__buttons-section main__download--sections-little-gap"
+              >
+                <div class="main__download__buttons--item">
+                  <img src="./img/windows_icon.svg" />
+                  <p>Windows x32</p>
+                </div>
+                <div class="main__download__buttons--item">
+                  <img src="./img/windows_icon.svg" />
+                  <p>Windows x64</p>
+                </div>
+                <div class="main__download__buttons--item">
+                  <img src="./img/mac_icon.svg" />
+                  <p>Mac OS</p>
+                </div>
+                <div class="main__download__buttons--item">
+                  <img src="./img/ubuntu_icon.svg" />
+                  <p>Ubuntu</p>
+                </div>
+              </div>
+            </div>
+            <div class="main__download--sections-gap">
+              <div class="download__additional-text-section">
+                <p>Download ApixRED for smartphone</p>
+                <p class="download__additional-text">[Coming soon]</p>
+              </div>
+
+              <div
+                class="main__download__buttons-section main__download--sections-little-gap"
+              >
+                <div class="main__download__buttons--item">
+                  <img src="./img/android_icon.svg" />
+                  <p>Android</p>
+                </div>
+                <div class="main__download__buttons--item">
+                  <img src="./img/mac_icon.svg" />
+                  <p>Iphone</p>
+                </div>
+                <div class="main__download__buttons--item">
+                  <img src="./img/huawei_icon.svg" />
+                  <p>Huawei</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            class="main__download__phone-pic"
+            src="./img/main_phone-pic.svg"
+          />
+        </div>
+      </section>
+      <section>
+        <h3 class="pricing__header">Pricing</h3>
+        <div class="pricing__section">
+          <div>
+            
+            <table class="pricing-table">
+              <thead>
+                <tr>
+                  <th
+                    class="pricing-table__cell pricing-table__header-cell--blank"
+                  ></th>
+                  <th
+                    style="border-left: 1px solid #596078"
+                    class="pricing-table__cell pricing-table__header-cell pricing-table__header--basic
+                    "
+                  >
+                    <p class="pricing-table__title">BASIC</p>
+                    <p class="pricing-table__header-price">59</p>
+                  </th>
+                  <th
+                    class="pricing-table__cell pricing-table__header-cell pricing-table__header--premium pricing-table--litle-cell
+                    pricing-table__headers--lower"
+                  >
+                    <p class="pricing-table__title">PREMIUM</p>
+                    <p class="pricing-table__header-price">129</p>
+                  </th>
+                  <th
+                    class="pricing-table__cell pricing-table__header-cell pricing-table__header--ultimate pricing-table--litle-cell
+                    pricing-table__headers--lower"
+                  >
+                    <p class="pricing-table__title">ULTIMATE</p>
+                    <p class="pricing-table__header-price">299</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    class="pricing-table__cell pricing-table__first-column pricing-table__first-column--upper-cell"
+                  >
+                    <p>license validaty</p>
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--basic"
+                  >
+                    <p>1 month</p>
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--premium"
+                  >
+                    <p>12 months</p>
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--ultimate"
+                  >
+                    <p>36 months</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="pricing-table__cell pricing-table__first-column pricing-table__table-cell--grey"
+                  >
+                    <p>Exchange integrations</p>
+                  </td>
+                  <td class="pricing-table__table-cell pricing-table--basic">
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                  <td class="pricing-table__table-cell pricing-table--premium">
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                  <td class="pricing-table__table-cell">
+                    <img
+                      class="pricing-table__table-cell--radio pricing-table--ultimate"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pricing-table__cell pricing-table__first-column">
+                    <p>Smart SL/TP</p>
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--basic"
+                  >
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--premium"
+                  >
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--ultimate"
+                  >
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="pricing-table__cell pricing-table__first-column pricing-table__table-cell--grey"
+                  >
+                    <p>Forex alerts</p>
+                  </td>
+                  <td class="pricing-table__table-cell pricing-table--basic">
+                    <p>Unlimited</p>
+                  </td>
+                  <td class="pricing-table__table-cell pricing-table--premium">
+                    <p>Unlimited</p>
+                  </td>
+                  <td class="pricing-table__table-cell pricing-table--ultimate">
+                    <p>Unlimited</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pricing-table__cell pricing-table__first-column">
+                    <p>Crypto alerts</p>
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--basic"
+                  >
+                    <p>Unlimited</p>
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--premium"
+                  >
+                    <p>Unlimited</p>
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--ultimate"
+                  >
+                    <p>Unlimited</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="pricing-table__cell pricing-table__first-column pricing-table__table-cell--grey"
+                  >
+                    <p>Forex tools</p>
+                  </td>
+                  <td class="pricing-table__table-cell pricing-table--basic">
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                  <td class="pricing-table__table-cell pricing-table--premium">
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                  <td class="pricing-table__table-cell pricing-table--ultimate">
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pricing-table__cell pricing-table__first-column">
+                    <p>Crypto tools</p>
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--basic"
+                  >
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--premium"
+                  >
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                  <td
+                    class="pricing-table__table-cell pricing-table__table-cell--black pricing-table--ultimate"
+                  >
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="border-radius: 0 0 0 8px"
+                    class="pricing-table__cell pricing-table__first-column pricing-table__table-cell--grey"
+                  >
+                    <p>Dashboard tools</p>
+                  </td>
+                  <td class="pricing-table__table-cell pricing-table--basic">
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                  <td class="pricing-table__table-cell pricing-table--premium">
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                  <td class="pricing-table__table-cell pricing-table--ultimate">
+                    <img
+                      class="pricing-table__table-cell--radio"
+                      src="./img/pricing-table_radio.svg"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="pricing-table__table-cell--last-row">
+                    <p>SUBSCRIBE</p>
+                  </td>
+                  <td
+                    style="
+                      border-right: 1px solid transparent;
+                      border-left: 1px solid transparent;
+                    "
+                    class="pricing-table__table-cell--last-row"
+                  >
+                    <p>SUBSCRIBE</p>
+                  </td>
+                  <td class="pricing-table__table-cell--last-row">
+                    <p>SUBSCRIBE</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="forex-tools__container news__more-section">
+          <div class="news__headers news__more-container">
+            <h3 class="main__news-header">News</h3>
+            <div class="news__more__carousel-section">
+              <div class="news__more__carousel-item">
+                <p class="news__more__carousel-item--header">
+                  Crude Oil May Rise Further on EIA Cushing Inventory Levels
+                </p>
+                <p class="news__more__carousel-item--text">
+                  Oil prices gained alongside the broader market as risk
+                  aversion pulled back overnight. EIA inventory data is in focus
+                  after the API showed another draft.
+                </p>
+                <p class="news__more__carousel-item--date">Dec 22, 2021 7:30</p>
+              </div>
+              
+              <div class="news__more__carousel-item">
+                <p class="news__more__carousel-item--header">
+                  Crude Oil May Rise Further on EIA Cushing Inventory Levels
+                </p>
+                <p class="news__more__carousel-item--text">
+                  Oil prices gained alongside the broader market as risk
+                  aversion pulled back overnight. EIA inventory data is in focus
+                  after the API showed another draft.
+                </p>
+                <p class="news__more__carousel-item--date">Dec 22, 2021 7:30</p>
+              </div>
+              <div class="news__more__carousel-item">
+                <p class="news__more__carousel-item--header">
+                  Crude Oil May Rise Further on EIA Cushing Inventory Levels
+                </p>
+                <p class="news__more__carousel-item--text">
+                  Oil prices gained alongside the broader market as risk
+                  aversion pulled back overnight. EIA inventory data is in focus
+                  after the API showed another draft.
+                </p>
+                <p class="news__more__carousel-item--date">Dec 22, 2021 7:30</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="news__more-container news__more__arrows-section">
+            <div id="news__arrow-left" class="news__more--buttons">
+              <img src="./img/news_arrow_left.png" />
+              <p class="news__more__arrows--text">Back</p>
+            </div>
+            <div id="news__arrow-right" class="news__more--buttons">
+              <p class="news__more__arrows--text">Next</p>
+              <img src="./img/news_arrow-right.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="apix__footer-container">
+        <div class="apix__footer__logo-section">
+          <a><img src="./img/ApixRED.png" alt="apix_logo" /></a>
+          <div class="apix__footer__logo-section__socials-section">
+            <a><img src="./img/facebook.png" alt="facebook_icon" /></a>
+            <a><img src="./img/twitter.png" alt="twitter_icon" /></a>
+            <a><img src="./img/youtube.png" alt="youtube_icon" /></a>
+          </div>
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Legal information</p>
+          <a href="/pages/service-agreement.html">Service Agreement</a>
+          <a href="/pages/private-policy.html">Private Policy</a>
+          <a href="/pages/warning-disclaimer.html">Warning Disclaimer</a>
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Crypto tools</p>
+          <a href="/pages/crypto-market-screener.html"
+            >Cryptocurrency Market Screener</a
+          >
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Forex tools</p>
+          <a href="/pages/economic-calenar.html">Economic Calendar</a>
+          <a href="/pages/forex-cross-rates.html">Forex Cross Rates</a>
+          <a href="/pages/forex-heat-map.html">Forex Heat Map</a>
+          <a href="/pages/forex-screener.html">Forex Screener</a>
+          <a href="/pages/market-alerts.html">Market alerts</a>
+        </div>
+        <div class="apix__footer__sections apix__footer__for-users-section">
+          <p class="apix__footer__sections--header">For users</p>
+          <a href="/pages/economic-calenar.html">support@apixred.com</a>
+          <a href="/pages/forex-cross-rates.html">Mobile App</a>
+          <a href="/pages/forex-heat-map.html">Blog</a>
+          <a href="/pages/forex-screener.html">Pricing</a>
+          <a href="/pages/market-alerts.html">Affiliate program</a>
+        </div>
+      </div>
+      <div class="apix__copyright-section">
+        <p>RISK WARNING</p>
+        <p>
+          Binary options trading is associated with a high risk of capital loss.
+          Please, read the full version of the risk warning.
+        </p>
+        <p class="apix__copyright-section__below-section">
+          © 2013 - 2022, X-systems & services PC
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous" 
+    ></script>
+    <script
+      type="text/javascript"
+      src="../xoffers/js/slick/slick.min.js"
+    ></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/pricing-table.js"></script>
+    <script src="./js/dropdown.js"></script>
+  </body>
+</html>

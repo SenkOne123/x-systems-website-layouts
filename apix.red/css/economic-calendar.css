@@ -1,0 +1,57 @@
+@import url("../css/clear.css");
+@import url("../css/header.css");
+@import url("../css/footer.css");
+@import url("../css/side_panel.css");
+@import url("../css/forex-tools.css");
+@import url("../css/main.css");
+
+.forex-tools__economic-calendar-main-pic {
+}
+@media screen and (max-width: 1440px) {
+  .forex-tools__description-gap {
+    margin-top: 30px;
+  }
+  .forex-tools__calendar-h1-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .forex-tools__container {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .h1__title {
+    font-size: 60px;
+  }
+  .forex-tools__description-text {
+    font-size: 14px;
+  }
+  body {
+    background-position: initial;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .apix__section-container {
+    margin-right: 9%;
+  }
+  .forex-tools__container {
+    padding-right: 0;
+  }
+  .forex-tools__big-section {
+    margin-right: 15%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .forex-tools__big-section {
+    margin-right: 0;
+  }
+  .apix__section-container {
+    margin-right: 5%;
+  }
+  .forex-tools__h2 {
+    font-size: 30px;
+  }
+  .h1__title {
+    font-size: 35px;
+  }
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Apix RED</title>
+    <link href="../css/clear.css" rel="stylesheet" />
+    <link href="../css/header.css" rel="stylesheet" />
+    <link href="../css/footer.css" rel="stylesheet" />
+    <link href="../css/side_panel.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="apix__header-container">
+        <div class="apix__header-logo">
+          <a href="../index.html"><img src="../img/ApixRED.png" alt="logo" /></a>
+          <img class="apix__header__button-burger" src="../img/apix_button_burger.svg" />
+        </div>
+
+        <div class="apix__header-navigation-section">
+          <nav>
+            <ul class="apix__header-navigation">
+              <li><a>Terminal</a></li>
+              <li onclick="showDropdown('#crypto-tools-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Crypto Tools</a>
+                <div id="crypto-tools-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item"><a href="../pages/crypto-market-screener.html">Cryptocurrency market screener</a></li>
+                    
+                  </ul>
+                </div>
+              </li>
+              <li onclick="showDropdown('#forex-tools-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Forex Tools</a>
+                <div id="forex-tools-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item">
+                      <a href="../pages/economic-calendar.html">
+                        Economic Calendar
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="../pages/forex-cross-rates.html">
+                        Forex Cross Rates
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="../pages/forex-heat-map.html">
+                        Forex Heat map
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="../pages/forex-screener.html">
+                        Forex Screener
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li onclick="showDropdown('#integrations-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Integrations</a>
+                <div id="integrations-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item">
+                      <a href="../pages/exchange-integrations.html">
+                        Echange Integrations
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </li>
+              <li><a>Download</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="apix__header-login-section">
+          <div class="apix__header-lk">
+            <a>
+              <div class="apix__header-lk-buttons">Sign up</div>
+            </a>
+            <a>
+              <div class="apix__header-lk-buttons">Log in</div>
+            </a>
+          </div>
+          <div class="apix__header_language-selector">
+            <div class="dropItem dropItem-language">
+              <a href="javascript:void(0);" class="language-box header-item">
+                <span class="header-item__icon"
+                  ><img
+                    src="/img/NKA4lhb38S05wwiuCV_kcmNIPh8PiNuZ.png"
+                    alt="En"
+                    style="border-radius: 2px"
+                /></span>
+                <span class="header-item__name">En</span>
+              </a>
+
+              <div class="dropDown-menu">
+                <a href="/tl" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/xopmnSYgRhYrAFSE336pXE1r3kUU3jBx.png"
+                      alt="Fil"
+                  /></span>
+                  <span class="header-item__name">Fil</span>
+                </a>
+                <a href="/es" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/Hrb5EiNhpi3vFzNFsAJ7emPX5uFOJFx3.png"
+                      alt="Es"
+                  /></span>
+                  <span class="header-item__name">Es</span>
+                </a>
+                <a href="/fr" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/xDnPBX0qFAQXlqnwvEFVnXCINfWYVQzN.png"
+                      alt="Fr"
+                  /></span>
+                  <span class="header-item__name">Fr</span>
+                </a>
+                <a href="/th" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/jr96bnixfewdUOUkNSuddKKrSw2a4N5Q.png"
+                      alt="Th"
+                  /></span>
+                  <span class="header-item__name">Th</span>
+                </a>
+                <a href="/vi" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/5Y2kQUH162CHP9WQyfaBcw3aGvrWt0Wz.png"
+                      alt="Vi"
+                  /></span>
+                  <span class="header-item__name">Vi</span>
+                </a>
+                <a href="/pt" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/QyEa2z7j3uovn4DrGHRhqNox9cbXWc1b.png"
+                      alt="Pt"
+                  /></span>
+                  <span class="header-item__name">Pt</span>
+                </a>
+                <a href="/hi" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/3-75fWScJoWYpAaFsnz1KP7EcWRh2jC5.png"
+                      alt="Hi"
+                  /></span>
+                  <span class="header-item__name">Hi</span>
+                </a>
+                <a href="/id" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/0a6vMRjhAe7PXPD4GxyddJhdog8GbxjC.png"
+                      alt="Id"
+                  /></span>
+                  <span class="header-item__name">Id</span>
+                </a>
+                <a href="/ms" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/gf1-U1f3kcCyQie7UyVU5yAHsMLf6kPf.png"
+                      alt="Ms"
+                  /></span>
+                  <span class="header-item__name">Ms</span>
+                </a>
+                <a href="/ru" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/--iGp57hLbNF7nsdABFqakUL1_Pw_x2n.png"
+                      alt="Ru"
+                  /></span>
+                  <span class="header-item__name">Ru</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <aside>
+      <div class="apix__side-panel__container">
+        <div class="apix__side-panel__main-section">
+          <p>Use e-mail to sign up</p>
+          <input
+            class="apix__side-panel__input"
+            type="email"
+            placeholder="E-mail"
+          />
+          <input
+            class="apix__side-panel__input"
+            type="password"
+            placeholder="Password"
+          />
+          <button class="apix__side-panel__button-ok">Sign up</button>
+          <button class="apix__side-panel__button-google">
+            Log in with Google
+          </button>
+          <div class="apix__side-panel__terms-section">
+            <input class="apix__side-panel__checkbox" type="checkbox" />
+            <p class="apix__side-panel__terms--text">
+              I agree to the
+              <span class="apix__side-panel__terms__text-highlight"
+                >terms & conditions</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="apix__side-panel__follow-us-section">
+          <p>Follow us on</p>
+          <div class="apix__side-panel__socials-section">
+            <a><img src="../img/circle_facebook.png" alt="facebook_icon" /></a>
+            <a><img src="../img/circle_telegram.png" alt="telegram_icon" /></a>
+            <a><img src="../img/circle_youtube.png" alt="youtube_icon" /></a>
+            <a><img src="../img/circle_blank.png" alt="blank_icon" /></a>
+            <a><img src="../img/circle_blank.png" alt="blank_icon" /></a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section>
+        <div class="apix__exchange__h1-section">
+          <h1 class="h1__title">
+            Exchange <br />
+            integrations
+          </h1>
+          <img
+            class="apix__exchange-integrations__signals"
+            src="../img/exchange-int-main-pic.png"
+            alt="signals"
+          />
+        </div>
+        <div class="apix__section-container">
+          <p
+            class="apix__exchange__text apix__exchange__huge-gap apix__exchange__little-text"
+          >
+            <span class="apix__exchange__red-text">ApixRED</span> broad
+            functionality will allow a trader to connect to any exchange on
+            which the trader has an account. Exchange is integrated into the
+            trading platform by the trader himself, which creates unlimited
+            opportunities for the trader.
+          </p>
+          <p class="apix__exchange__text apix__exchange__text-gap">
+            The <span class="apix__exchange__red-text">ApixRED</span>
+            interface allows you to open various analytical solutions for the
+            crypto and Forex markets, including the opportunities that various
+            exchanges offer their traders. Thousands of traders have chosen the
+            <span class="apix__exchange__red-text">ApixRED</span>
+            trading terminal for its intuitive design and ease of use.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="apix__exchange__section-gap apix__section-container apix__exchange__integrate-container">
+          <p class="apix__exchange__section-header">
+            How to integrate?
+          </p>
+          <div class="apix__exchange__integrate-pic"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="apix__footer-container">
+        <div class="apix__footer__logo-section">
+          <a><img src="../img/ApixRED.png" alt="apix_logo" /></a>
+          <div class="apix__footer__logo-section__socials-section">
+            <a><img src="../img/facebook.png" alt="facebook_icon" /></a>
+            <a><img src="../img/twitter.png" alt="twitter_icon" /></a>
+            <a><img src="../img/youtube.png" alt="youtube_icon" /></a>
+          </div>
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Legal information</p>
+          <a href="/pages/service-agreement.html">Service Agreement</a>
+          <a href="/pages/private-policy.html">Private Policy</a>
+          <a href="/pages/warning-disclaimer.html">Warning Disclaimer</a>
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Crypto tools</p>
+          <a href="/pages/crypto-market-screener.html"
+            >Cryptocurrency Market Screener</a
+          >
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Forex tools</p>
+          <a href="/pages/economic-calenar.html">Economic Calendar</a>
+          <a href="/pages/forex-cross-rates.html">Forex Cross Rates</a>
+          <a href="/pages/forex-heat-map.html">Forex Heat Map</a>
+          <a href="/pages/forex-screener.html">Forex Screener</a>
+          <a href="/pages/market-alerts.html">Market alerts</a>
+        </div>
+        <div class="apix__footer__sections apix__footer__for-users-section">
+          <p class="apix__footer__sections--header">For users</p>
+          <a href="/pages/economic-calenar.html">support@apixred.com</a>
+          <a href="/pages/forex-cross-rates.html">Mobile App</a>
+          <a href="/pages/forex-heat-map.html">Blog</a>
+          <a href="/pages/forex-screener.html">Pricing</a>
+          <a href="/pages/market-alerts.html">Affiliate program</a>
+        </div>
+      </div>
+      <div class="apix__copyright-section">
+        <p>RISK WARNING</p>
+        <p>
+          Binary options trading is associated with a high risk of capital loss.
+          Please, read the full version of the risk warning.
+        </p>
+        <p class="apix__copyright-section__below-section">
+          © 2013 - 2022, X-systems & services PC
+        </p>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous" 
+    ></script>
+    <script src="../../js/common.js"></script>
+    <script src="../js/dropdown.js"></script>
+  </body>
+</html>

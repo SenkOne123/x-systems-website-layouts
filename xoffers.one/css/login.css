@@ -1,0 +1,25 @@
+@import url("../css/custom_colors.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background: #232439;
+}
+.footer__container {
+  padding-top: 70px;
+  background: #232439 url("../img/login_bg.png") no-repeat center;
+  background-size: cover;
+}
+.header__addtional-field {
+  height: 71px;
+  background: #232439 url("../img/login_bg.png") no-repeat center;
+  background-size: cover;
+}
+main {
+  margin-top: 70px;
+}
+.header_container {
+  backdrop-filter: none;
+}

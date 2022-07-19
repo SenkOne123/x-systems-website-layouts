@@ -1,0 +1,69 @@
+.forex-tools__h2 {
+  font-weight: 400;
+  font-size: 43px;
+  line-height: 100%;
+}
+.forex-tools__headers-gap {
+  margin-top: 30px;
+}
+.forex-tools__description-gap {
+  margin-top: 130px;
+}
+.forex-tools__description-section {
+  background: linear-gradient(
+    267.42deg,
+    rgba(40, 46, 64, 0.05) 0%,
+    rgba(240, 44, 44, 0.05) 100%
+  );
+  mix-blend-mode: normal;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(214, 221, 238, 0.49);
+  padding: 22px;
+  border-radius: 10px;
+}
+.forex-tools__big-section {
+  margin-right: 25%;
+}
+.forex-tools__description-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+}
+.forex-tools__content-gap {
+  margin-top: 94px;
+}
+.forex-tools__calendar-h1-section {
+  padding-top: 115px;
+  padding-bottom: 94px;
+}
+.forex-tools__container {
+  padding-right: 9%;
+  padding-bottom: 150px;
+}
+.forex-tools__h1 {
+  position: static !important;
+}
+.forex-tools__main-pics {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .forex-tools__container {
+    padding-bottom: 50px;
+  }
+  .forex-tools__big-section {
+    margin-right: 0;
+  }
+  .forex-tools__calendar-h1-section {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+  .forex-tools__description-gap {
+    margin-top: 0;
+  }
+  .forex-tools__content-gap {
+    margin-top: 30px;
+  }
+}

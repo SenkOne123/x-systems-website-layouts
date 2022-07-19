@@ -1,0 +1,109 @@
+@import url("../css/clear.css");
+@import url("../css/header.css");
+@import url("../css/footer.css");
+@import url("../css/side_panel.css");
+@import url("../css/main.css");
+
+body {
+  background-position: initial;
+}
+
+.legal-info__container {
+  padding-top: 178px;
+  padding-bottom: 150px;
+  padding-right: 9%;
+}
+.legal-info__tab-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+  margin-top: 38px;
+}
+.legal-info__tab-item {
+  cursor: pointer;
+  background: radial-gradient(272.41% 100% at 0% 0%, #374058 0%, #2a3145 100%);
+  border: 1px solid #fd4b6c;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  height: 58px;
+  padding: 18px 47px;
+  text-align: center;
+}
+.legal-info__tab-text {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 100%;
+}
+.legal-info__active-tab-item {
+  background: #374058;
+  border: 1px solid #374058;
+  box-shadow: inset 0px 2px 5px 3px rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  color: #151923;
+}
+.legal-info__text-section {
+  margin-top: 55px;
+}
+.legal-info__text {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+}
+.legal-info__text-style {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+}
+.legal-info__ol {
+  margin-top: 30px !important;
+  list-style: auto !important;
+  margin: auto;
+  padding: 0 0 0 30px !important;
+}
+.legal-info__ul {
+  margin-top: 30px !important;
+  list-style: disc !important;
+  margin: auto;
+  padding: 0 0 0 30px !important;
+}
+.legal-info__ol__lettered {
+  list-style: none;
+}
+.legal-info__headers {
+  font-size: 33px;
+  font-weight: 600;
+}
+@media screen and (max-width: 1600px) {
+  aside {
+    display: none;
+  }
+  .apix__section-container {
+    margin-right: 9%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .apix__header {
+    font-size: 50px;
+    text-align: center;
+  }
+  .legal-info__tab-section {
+    justify-content: center;
+  }
+  .legal-info__container {
+    padding-top: 50px;
+  }
+  .legal-info__text {
+    text-align: justify;
+  }
+  .apix__section-container {
+    margin-right: 5%;
+    padding-right: 0;
+  }
+  .legal-info__headers {
+    text-align: start;
+    font-size: 23px;
+  }
+}

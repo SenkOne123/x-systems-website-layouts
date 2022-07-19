@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Forex tools - Heat Map</title>
+    <link href="../css/news.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="apix__header-container">
+        <div class="apix__header-logo">
+          <a href="../index.html"><img src="../img/ApixRED.png" alt="logo" /></a>
+          <img class="apix__header__button-burger" src="../img/apix_button_burger.svg" />
+        </div>
+
+        <div class="apix__header-navigation-section">
+          <nav>
+            <ul class="apix__header-navigation">
+              <li><a>Terminal</a></li>
+              <li onclick="showDropdown('#crypto-tools-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Crypto Tools</a>
+                <div id="crypto-tools-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item"><a href="../pages/crypto-market-screener.html">Cryptocurrency market screener</a></li>
+                    
+                  </ul>
+                </div>
+              </li>
+              <li onclick="showDropdown('#forex-tools-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Forex Tools</a>
+                <div id="forex-tools-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item">
+                      <a href="../pages/economic-calendar.html">
+                        Economic Calendar
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="../pages/forex-cross-rates.html">
+                        Forex Cross Rates
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="../pages/forex-heat-map.html">
+                        Forex Heat map
+                      </a>
+                    </li>
+                    <li class="apix__header__button-burger-item__list-item apix__header__button-burger-item__list-item--gap">
+                      <a href="../pages/forex-screener.html">
+                        Forex Screener
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li onclick="showDropdown('#integrations-dropdown-content', this)">
+                <a class="apix__header__button-burger-button">Integrations</a>
+                <div id="integrations-dropdown-content" class="apix__header__button-burger-item">
+                  <ul>
+                    <li class="apix__header__button-burger-item__list-item">
+                      <a href="../pages/exchange-integrations.html">
+                        Echange Integrations
+                      </a>
+                    </li>
+                    
+                  </ul>
+                </div>
+              </li>
+              <li><a>Download</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="apix__header-login-section">
+          <div class="apix__header-lk">
+            <a>
+              <div class="apix__header-lk-buttons">Sign up</div>
+            </a>
+            <a>
+              <div class="apix__header-lk-buttons">Log in</div>
+            </a>
+          </div>
+          <div class="apix__header_language-selector">
+            <div class="dropItem dropItem-language">
+              <a href="javascript:void(0);" class="language-box header-item">
+                <span class="header-item__icon"
+                  ><img
+                    src="/img/NKA4lhb38S05wwiuCV_kcmNIPh8PiNuZ.png"
+                    alt="En"
+                    style="border-radius: 2px"
+                /></span>
+                <span class="header-item__name">En</span>
+              </a>
+
+              <div class="dropDown-menu">
+                <a href="/tl" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/xopmnSYgRhYrAFSE336pXE1r3kUU3jBx.png"
+                      alt="Fil"
+                  /></span>
+                  <span class="header-item__name">Fil</span>
+                </a>
+                <a href="/es" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/Hrb5EiNhpi3vFzNFsAJ7emPX5uFOJFx3.png"
+                      alt="Es"
+                  /></span>
+                  <span class="header-item__name">Es</span>
+                </a>
+                <a href="/fr" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/xDnPBX0qFAQXlqnwvEFVnXCINfWYVQzN.png"
+                      alt="Fr"
+                  /></span>
+                  <span class="header-item__name">Fr</span>
+                </a>
+                <a href="/th" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/jr96bnixfewdUOUkNSuddKKrSw2a4N5Q.png"
+                      alt="Th"
+                  /></span>
+                  <span class="header-item__name">Th</span>
+                </a>
+                <a href="/vi" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/5Y2kQUH162CHP9WQyfaBcw3aGvrWt0Wz.png"
+                      alt="Vi"
+                  /></span>
+                  <span class="header-item__name">Vi</span>
+                </a>
+                <a href="/pt" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/QyEa2z7j3uovn4DrGHRhqNox9cbXWc1b.png"
+                      alt="Pt"
+                  /></span>
+                  <span class="header-item__name">Pt</span>
+                </a>
+                <a href="/hi" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/3-75fWScJoWYpAaFsnz1KP7EcWRh2jC5.png"
+                      alt="Hi"
+                  /></span>
+                  <span class="header-item__name">Hi</span>
+                </a>
+                <a href="/id" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/0a6vMRjhAe7PXPD4GxyddJhdog8GbxjC.png"
+                      alt="Id"
+                  /></span>
+                  <span class="header-item__name">Id</span>
+                </a>
+                <a href="/ms" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/gf1-U1f3kcCyQie7UyVU5yAHsMLf6kPf.png"
+                      alt="Ms"
+                  /></span>
+                  <span class="header-item__name">Ms</span>
+                </a>
+                <a href="/ru" class="language-box">
+                  <span class="header-item__icon"
+                    ><img
+                      src="/img/--iGp57hLbNF7nsdABFqakUL1_Pw_x2n.png"
+                      alt="Ru"
+                  /></span>
+                  <span class="header-item__name">Ru</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <aside>
+      <div class="apix__side-panel__container">
+        <div class="apix__side-panel__main-section">
+          <p>Use e-mail to sign up</p>
+          <input
+            class="apix__side-panel__input"
+            type="email"
+            placeholder="E-mail"
+          />
+          <input
+            class="apix__side-panel__input"
+            type="password"
+            placeholder="Password"
+          />
+          <button class="apix__side-panel__button-ok">Sign up</button>
+          <button class="apix__side-panel__button-google">
+            Log in with Google
+          </button>
+          <div class="apix__side-panel__terms-section">
+            <input class="apix__side-panel__checkbox" type="checkbox" />
+            <p class="apix__side-panel__terms--text">
+              I agree to the
+              <span class="apix__side-panel__terms__text-highlight"
+                >terms & conditions</span
+              >
+            </p>
+          </div>
+        </div>
+        <div class="apix__side-panel__follow-us-section">
+          <p>Follow us on</p>
+          <div class="apix__side-panel__socials-section">
+            <a><img src="../img/circle_facebook.png" alt="facebook_icon" /></a>
+            <a><img src="../img/circle_telegram.png" alt="telegram_icon" /></a>
+            <a><img src="../img/circle_youtube.png" alt="youtube_icon" /></a>
+            <a><img src="../img/circle_blank.png" alt="blank_icon" /></a>
+            <a><img src="../img/circle_blank.png" alt="blank_icon" /></a>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section>
+        <div class="apix__section-container">
+          <div class="forex-tools__calendar-h1-section">
+            <h2 class="forex-tools__h2">News</h2>
+            <h1 class="h1__title forex-tools__h1 forex-tools__headers-gap">
+              Forex strategy
+            </h1>
+          </div>
+        </div>
+        <div class="apix__main-container">
+          <div class="news__container">
+            <p class="apix__exchange__text">
+              The FX market is where currencies are traded. It is the only truly
+              continuous and nonstop trading market in the world. In the past,
+              the forex market was dominated by institutional firms and large
+              banks, which acted on behalf of clients. But it has become more
+              retail-oriented in recent years, and traders and investors of many
+              holding sizes have begun participating in it.
+            </p>
+            <p class="apix__exchange__text news__text-gap">
+              An interesting aspect of world forex markets is that there are no
+              physical buildings that function as trading venues for the
+              markets. Instead, it is a series of connections made through
+              trading terminals and computer networks. Participants in this
+              market are institutions, investment banks, commercial banks, and
+              retail investors.
+            </p>
+            <h3 class="news__headers news__headers-gap">
+              What is this forex market?
+            </h3>
+            <p class="news__headers-gap apix__exchange__text">
+              The foreign exchange market is where currencies are traded.
+              Currencies are important because they allow us to purchase goods
+              and services locally and across borders. International currencies
+              need to be exchanged to conduct foreign trade and business.
+            </p>
+            <p class="apix__exchange__text news__text-gap">
+              If you are living in the United States and want to buy cheese from
+              France, then either you or the company from which you buy the
+              cheese has to pay the French for the cheese in euros (EUR). This
+              means that the U.S. importer would have to exchange the equivalent
+              value of U.S. dollars (USD) into euros.
+            </p>
+            <p class="apix__exchange__text news__text-gap">
+              The same goes for traveling. A French tourist in Egypt can’t pay
+              in euros to see the pyramids because it’s not the locally accepted
+              currency. The tourist has to exchange the euros for the local
+              currency, in this case the Egyptian pound, at the current exchange
+              rate.
+            </p>
+            <p class="apix__exchange__text news__text-gap">
+              One unique aspect of this international market is that there is no
+              central marketplace for foreign exchange. Rather, currency trading
+              is conducted electronically over the counter (OTC), which means
+              that all transactions occur via computer networks among traders
+              around the world, rather than on one centralized exchange. The
+              market is open 24 hours a day, five and a half days a week, and
+              currencies are traded worldwide in the major financial centers of
+              Frankfurt, Hong Kong, London, New York, Paris, Singapore, Sydney,
+              Tokyo, and Zurich—across almost every time zone. This means that
+              when the U.S. trading day ends, the forex market begins anew in
+              Tokyo and Hong Kong. As such, the forex market can be extremely
+              active anytime, with price quotes changing constantly.
+            </p>
+            <p class="news__headers news__little-header news__headers-gap">
+              There are different options for classifying strategies. For
+              example:
+            </p>
+            <ul class="apix__exchange__text news__text-gap news__ul">
+              <li>
+                By the type of opening transactions: trend, countertrend,
+                channel, on corrections, etc.
+              </li>
+              <li>
+                Trading time: by Forex sessions (Europe, America and Asia),
+                publication of fundamental news and statistics.
+              </li>
+              <li>
+                Automatic and semi-automatic (with manual confirmation of
+                opening a deal), etc. In this article, examples of strategies
+                are divided by the main time frames (timeframes). Each of them
+                has its characteristics and methods of market analysis.
+              </li>
+            </ul>
+            <figure>
+              <blockquote
+                class="apix__blockquote apix__exchange__text"
+              >
+                <p>
+                  You can use strategies not only on the recommended timeframes.
+                  For testing, choose historical data for the last 2-3 years.
+                  Forex is changing rapidly; more "long" intervals will not give
+                  the correct information on the current market. Indicators used
+                  in strategies are included in the basic set of technical tools
+                  in all trading terminals!
+                </p>
+              </blockquote>
+              <figcaption class="apix__figcaption">
+                Mark Timers (CEO CFR&PC COMPANY)
+              </figcaption>
+            </figure>
+            <h3 class="news__headers">
+              M1 (scalping). We profit from the “chaos” of the market
+            </h3>
+            <p class="apix__exchange__text news__text-gap">
+              The youngest and, accordingly, the most "noisy" timeframe. Transactions last no more than 2-3 minutes, profit 5-7 points. It is for M1 that the most automatic Expert Advisors are offered.
+            </p>
+            <p class="apix__exchange__text news__text-gap">
+              <b>Indicators.</b> Only a brief description, look for more information about the indicators in books on technical analysis and Internet.
+            </p>
+            <ol class="apix__news__ol apix__exchange__text news__text-gap">
+              <li> Simple (SMA) and exponential (EMA) moving averages. Trend indicators by which we determine the opening point of the option. The strategy is not intended for trading during flat periods. We trade only if the range is between at least 15-25 points!</li>
+              <li> ADX (Average Directional Movement). Confirmation of the trend by the Moving Average. The indicator goes up and above the level of 20-uptrend, the movement down below the level of 40 – downtrend. The movement between the levels is flat.</li>
+            </ol>
+            <img class="apix__news__pic" src="../img/news_pic.svg" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="forex-tools__container news__more-section">
+          <div class="news__headers news__more-container">
+            <h3>News</h3>
+          <div class="news__more__carousel-section">
+            <div class="news__more__carousel-item">
+              <p class="news__more__carousel-item--header">
+                Crude Oil May Rise Further on EIA Cushing Inventory Levels
+              </p>
+              <p class="news__more__carousel-item--text">
+                Oil prices gained alongside the broader market as risk aversion pulled back overnight. EIA inventory data is in focus after the API showed another draft.
+              </p>
+              <p class="news__more__carousel-item--date">
+                Dec 22, 2021 7:30
+              </p>
+            </div>
+            <div class="news__more__carousel-item">
+              <p class="news__more__carousel-item--header">
+                Crude Oil May Rise Further on EIA Cushing Inventory Levels
+              </p>
+              <p class="news__more__carousel-item--text">
+                Oil prices gained alongside the broader market as risk aversion pulled back overnight. EIA inventory data is in focus after the API showed another draft.
+              </p>
+              <p class="news__more__carousel-item--date">
+                Dec 22, 2021 7:30
+              </p>
+            </div>
+            <div class="news__more__carousel-item">
+              <p class="news__more__carousel-item--header">
+                Crude Oil May Rise Further on EIA Cushing Inventory Levels
+              </p>
+              <p class="news__more__carousel-item--text">
+                Oil prices gained alongside the broader market as risk aversion pulled back overnight. EIA inventory data is in focus after the API showed another draft.
+              </p>
+              <p class="news__more__carousel-item--date">
+                Dec 22, 2021 7:30
+              </p>
+            </div>
+            <div class="news__more__carousel-item">
+              <p class="news__more__carousel-item--header">
+                Crude Oil May Rise Further on EIA Cushing Inventory Levels
+              </p>
+              <p class="news__more__carousel-item--text">
+                Oil prices gained alongside the broader market as risk aversion pulled back overnight. EIA inventory data is in focus after the API showed another draft.
+              </p>
+              <p class="news__more__carousel-item--date">
+                Dec 22, 2021 7:30
+              </p>
+            </div>
+            <div class="news__more__carousel-item">
+              <p class="news__more__carousel-item--header">
+                Crude Oil May Rise Further on EIA Cushing Inventory Levels
+              </p>
+              <p class="news__more__carousel-item--text">
+                Oil prices gained alongside the broader market as risk aversion pulled back overnight. EIA inventory data is in focus after the API showed another draft.
+              </p>
+              <p class="news__more__carousel-item--date">
+                Dec 22, 2021 7:30
+              </p>
+            </div>
+          </div>
+          </div>
+          
+          <div class="news__more-container news__more__arrows-section">
+            <div id="news__arrow-left" class="news__more--buttons">
+              <img src="../img/news_arrow_left.png">
+              <p class="news__more__arrows--text">Back</p>
+            </div>
+            <div id="news__arrow-right" class="news__more--buttons">
+              <p class="news__more__arrows--text">Next</p>
+              <img src="../img/news_arrow-right.png">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="apix__footer-container">
+        <div class="apix__footer__logo-section">
+          <a><img src=".../img/ApixRED.png" alt="apix_logo" /></a>
+          <div class="apix__footer__logo-section__socials-section">
+            <a><img src="../img/facebook.png" alt="facebook_icon" /></a>
+            <a><img src="../img/twitter.png" alt="twitter_icon" /></a>
+            <a><img src="../img/youtube.png" alt="youtube_icon" /></a>
+          </div>
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Legal information</p>
+          <a href="/service-agreement.html">Service Agreement</a>
+          <a href="/private-policy.html">Private Policy</a>
+          <a href="/warning-disclaimer.html">Warning Disclaimer</a>
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Crypto tools</p>
+          <a href="/crypto-market-screener.html"
+            >Cryptocurrency Market Screener</a
+          >
+        </div>
+        <div class="apix__footer__sections">
+          <p class="apix__footer__sections--header">Forex tools</p>
+          <a href="/economic-calenar.html">Economic Calendar</a>
+          <a href="/forex-cross-rates.html">Forex Cross Rates</a>
+          <a href="/forex-heat-map.html">Forex Heat Map</a>
+          <a href="/forex-screener.html">Forex Screener</a>
+          <a href="/market-alerts.html">Market alerts</a>
+        </div>
+        <div class="apix__footer__sections apix__footer__for-users-section">
+          <p class="apix__footer__sections--header">For users</p>
+          <a href="/economic-calenar.html">support@apixred.com</a>
+          <a href="/forex-cross-rates.html">Mobile App</a>
+          <a href="/forex-heat-map.html">Blog</a>
+          <a href="/forex-screener.html">Pricing</a>
+          <a href="/market-alerts.html">Affiliate program</a>
+        </div>
+      </div>
+      <div class="apix__copyright-section">
+        <p>RISK WARNING</p>
+        <p>
+          Binary options trading is associated with a high risk of capital loss.
+          Please, read the full version of the risk warning.
+        </p>
+        <p class="apix__copyright-section__below-section">
+          © 2013 - 2022, X-systems & services PC
+        </p>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../xoffers/js/slick/slick.min.js"></script>
+    <script src="../js/carousel.js"></script>
+    <script src="../js/dropdown.js"></script>
+  </body>
+</html>

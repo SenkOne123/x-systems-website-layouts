@@ -1,0 +1,852 @@
+@import url("../css/clear.css");
+@import url("../css/header.css");
+@import url("../css/footer.css");
+@import url("../css/side_panel.css");
+@import url("../css/forex-tools.css");
+@import url("../css/news-carousel.css");
+
+body {
+  background: url("../img/backgroud_waves.svg"),
+    url("../img/background.svg") no-repeat center;
+  background-position: -275px 70px;
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+  color: #d6ddee;
+}
+.apix__exchange__h1-section {
+  display: flex;
+}
+.h1__title {
+  position: relative;
+  top: 178px;
+  left: 9%;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 100%;
+  color: #d6ddee;
+  width: 75%;
+}
+.apix__exchange-integrations__signals {
+  position: absolute;
+  right: 14.5%;
+  top: 70px;
+}
+.apix__exchange__text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+}
+.apix__exchange__huge-gap {
+  margin-top: 550px;
+}
+.apix__section-container {
+  margin-left: 9%;
+  margin-right: calc(276px + 5%);
+}
+.apix__exchange__little-text {
+  width: 54%;
+}
+.apix__exchange__red-text {
+  color: #fd4b6c;
+}
+.apix__exchange__text-gap {
+  margin-top: 63px;
+}
+.apix__exchange__section-gap {
+  margin-top: 80px;
+}
+.apix__exchange__section-header {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 140%;
+}
+.apix__exchange__integrate-pic {
+  background: url("../img/how-to-integrate.png") no-repeat center;
+  background-size: 124%;
+  width: 100%;
+  height: 800px;
+  margin-top: 34px;
+}
+.apix__exchange__integrate-container {
+  padding-bottom: 130px;
+}
+.apix__header {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 100%;
+}
+.main__h1-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 78px 275px 100px 9%;
+}
+.main__trading-panel-pic--mobile {
+  display: none;
+}
+.main__text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 80px;
+}
+.main__h2 {
+  font-weight: 400;
+  font-size: 43px;
+  line-height: 100%;
+}
+.main__h1 {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 100%;
+}
+.main__h1-section__button {
+  cursor: pointer;
+  width: 240px;
+  text-align: center;
+  background: linear-gradient(
+    271.75deg,
+    #fd4b6c 0%,
+    #f82a50 0.01%,
+    #fd998a 100%
+  );
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #fff;
+  padding: 22px 52px;
+}
+.main__trading-terminal-pic {
+  position: relative;
+  z-index: -1;
+  object-fit: cover;
+}
+.main__trading-terminal-pic--second {
+  position: absolute;
+  top: -66px;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  mix-blend-mode: color-dodge;
+  object-fit: cover;
+}
+.main__trading-terminal-pic--third {
+  position: absolute;
+  top: 40px;
+  right: 10%;
+  bottom: 0;
+  z-index: -3;
+  object-fit: cover;
+}
+.main__download-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 275px 240px 10%;
+  overflow-x: hidden;
+  gap: 15%;
+}
+.main__download-icon {
+  width: 12px;
+  height: 12px;
+}
+.main__heading-text {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 100%;
+}
+.main__text {
+  white-space: nowrap;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 100%;
+}
+.main__little-text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+}
+.main__little-gap {
+  margin-top: 30px;
+}
+.main__download-button {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 280px;
+}
+.main__more-info-section {
+  padding-left: 9%;
+  padding-right: 277px;
+  padding-bottom: 240px;
+}
+.main__red-text {
+  color: #fd4b6c;
+}
+.main__colored-squares-section {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.main__trading-terminal-pic--mobile,
+.main__trading-terminal-pic2--mobile,
+.main__trading-terminal-pic3--mobile {
+  display: none;
+}
+.main__colored-squares--item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 0 0 406px;
+  height: 420px;
+  border-radius: 30px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 40px;
+  box-shadow: 0px 10px 50px rgba(15, 20, 34, 0.25),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.2);
+}
+.main__colored-squares--first-item {
+  background: url("../img/colored-square1-bg.png") no-repeat top,
+    radial-gradient(272.41% 100% at 0% 0%, #9d70ff 0%, #439afb 100%);
+}
+.main__colored-squares--second-item {
+  background: url("../img/colored-square2-bg.png") no-repeat top,
+    radial-gradient(272.41% 100% at 0% 0%, #61f1d7 0%, #0088ce 100%);
+}
+.main__colored-squares--third-item {
+  background: url("../img/colored-square3-bg.png") no-repeat top,
+    radial-gradient(272.41% 100% at 0% 0%, #4bbeff 0%, #2370dc 100%);
+}
+.main__colored-squares__item-header {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+}
+.main__colored-squares__item-text {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+}
+.main__more-download-section {
+  position: relative;
+  padding-left: 9%;
+  padding-right: 9%;
+  padding-bottom: 200px;
+}
+.main__text-headers {
+  font-weight: 600;
+}
+.main__download--sections-gap {
+  margin-top: 60px;
+}
+.main__download--sections-little-gap {
+  margin-top: 30px;
+}
+.main__download__buttons-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.main__download__buttons--item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 188px;
+  gap: 13px;
+  height: 70px;
+  background: radial-gradient(272.41% 100% at 0% 0%, #374058 0%, #2a3145 100%);
+  border-radius: 8px;
+  padding: 27px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+}
+.main__download__phone-pic {
+  position: absolute;
+  right: 277px;
+  top: 170px;
+}
+.download__additional-text-section {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.download__additional-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #808080;
+}
+.pricing__section {
+  padding-top: 60px;
+  padding-bottom: 130px;
+  padding-left: 16%;
+  padding-right: 30%;
+}
+.pricing__header {
+  padding-top: 160px;
+  padding-left: 9%;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 100%;
+}
+.pricing-table {
+  border-spacing: 0;
+}
+.pricing-table__cell {
+  align-items: center;
+  padding: 20px 0;
+  border-right: 1px solid #596078;
+  border-radius: 0 !important;
+}
+.pricing-table__header-cell {
+  padding: 17px 74px 22px 74px;
+  height: 103px;
+  border-radius: 8px 8px 0 0;
+  background: radial-gradient(272.41% 100% at 0% 0%, #374058 50%, #2a3145 100%);
+}
+.pricing-table__title {
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 100%;
+}
+.pricing-table__header-price {
+  position: relative;
+  font-weight: 700;
+  font-size: 51px;
+  line-height: 100%;
+}
+.pricing-table__header-price::before {
+  content: url("../img/dollar_icon.svg");
+  position: absolute;
+  top: -20px;
+  left: -18px;
+}
+.pricing-table__header-cell--blank {
+  border: 0;
+}
+.pricing-table__header--basic {
+  border-top: 3px solid #4bbeff;
+}
+.pricing-table__header--premium {
+  border-top: 3px solid #7bffe7;
+}
+.pricing-table__header--ultimate {
+  border-top: 3px solid #9d70ff;
+}
+.pricing-table__first-column {
+  border-right: 1px solid #596078;
+  border-left: 1px solid #596078;
+  width: 310px;
+  background: #252c41;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  padding-left: 26px;
+}
+.pricing-table__first-column--upper-cell {
+  border-radius: 8px 0 0 0;
+  border-top: 1px solid #596078;
+}
+.pricing-table__table-cell {
+  border-right: 1px solid #596078;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  border-radius: 0;
+  background: #373f57;
+}
+.pricing-table__table-cell--black {
+  background: #252c41;
+}
+.pricing-table__table-cell--grey {
+  background: #373f57;
+}
+.pricing-table__table-cell--radio {
+  display: block;
+  margin: 0 auto;
+}
+.pricing-table__table-cell--last-row {
+  cursor: pointer;
+  background: #35818b;
+  padding: 25px 0;
+  border-radius: 0px 0px 8px 8px;
+  border-right: 1px solid #596078;
+  border-left: 1px solid #596078;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.15em;
+  text-align: center;
+}
+.main__news-header {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 100%;
+}
+.main__trading-panel--elipse {
+  display: none;
+}
+@media screen and (max-width: 1700px) {
+  .main__download__phone-pic {
+    top: 410px;
+    width: 35%;
+  }
+  .h1__title {
+    top: 90px;
+  }
+  .apix__exchange-integrations__signals {
+    right: 24%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .main__download-section {
+    padding-top: 0;
+    padding-bottom: 150px;
+  }
+  .main__colored-squares--item {
+    flex: 0 0 350px;
+  }
+  .main__heading-text {
+    white-space: nowrap;
+  }
+  .main__trading-terminal-pic--third {
+    top: 0;
+    right: 4%;
+  }
+  .apix__exchange__huge-gap {
+    margin-top: 850px;
+  }
+  .apix__exchange-integrations__signals {
+    top: 285px;
+    right: 18%;
+    width: 60%;
+    top: 69px;
+  }
+  .apix__exchange__huge-gap {
+    margin-top: 350px;
+  }
+  .apix__exchange__integrate-pic {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .main__h1-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+  .main__download-section {
+    gap: 5%;
+  }
+  .h1__pics-section {
+    overflow: hidden;
+  }
+  .main__colored-squares--item {
+    flex-basis: 310px;
+    height: 400px;
+  }
+  .main__trading-terminal-pic--second {
+    width: 75%;
+  }
+  .h1__title {
+    font-size: 60px;
+    z-index: 2;
+  }
+  .apix__section-container {
+    padding-top: 60px;
+  }
+
+  .pricing__section {
+    padding-left: 5%;
+    padding-right: 26%;
+  }
+
+  /* .apix__exchange__text {
+    font-size: 16px;
+  } */
+  .apix__exchange__text-gap {
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 1321px) {
+  .main__trading-terminal-pic--second,
+  .main__trading-terminal-pic--third {
+    top: 115px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .apix__exchange-integrations__signals {
+    right: 25%;
+    top: 69px;
+    width: 50%;
+  }
+  .h1__title {
+    top: 50px;
+    font-size: 50px;
+  }
+  .apix__side-panel__container {
+    padding-top: 90px;
+  }
+  .apix__exchange__text {
+    width: 100%;
+    font-size: 14px;
+  }
+  .apix__exchange__little-text {
+    width: 50%;
+  }
+  .apix__exchange__huge-gap {
+    margin-top: 200px;
+  }
+  .apix__exchange__integrate-pic {
+    width: 90%;
+    height: 500px;
+  }
+  .apix__exchange__section-gap {
+    margin-top: 0;
+  }
+
+  .apix__side-panel__container {
+    padding-top: 150px;
+  }
+  .main__h1-section {
+    padding-top: 80px;
+    padding-bottom: 180px;
+    padding-left: 5%;
+  }
+  .main__trading-terminal-pic {
+    width: 100%;
+  }
+  .main__trading-terminal-pic--second,
+  .main__trading-terminal-pic--third {
+    top: 56px;
+    right: 241px;
+  }
+  .main__colored-squares-section {
+    justify-content: center;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .main__trading-panel-pic {
+    width: 60%;
+  }
+  .main__more-info-section {
+    padding-left: 0;
+  }
+  .main__colored-squares-section {
+    gap: 15px;
+  }
+  .main__colored-squares--item {
+    height: 350px;
+  }
+  .main__more-info-section {
+    padding-bottom: 170px;
+  }
+  .main__download-section {
+    padding-left: 5%;
+  }
+  .main__more-info__text-section,
+  .main__more-download-section {
+    padding-left: 5%;
+  }
+  .news__more-container {
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .news__more-section {
+    padding-right: 0;
+  }
+  .apix__exchange-integrations__signals {
+    right: 3%;
+    width: 72%;
+    top: 30px;
+  }
+  aside {
+    display: none;
+  }
+  body {
+    background-position: 0 70px;
+  }
+  .main__download__phone-pic {
+    display: none;
+  }
+
+  .main__h1-section {
+    padding: 78px 0 100px 9%;
+  }
+  .main__trading-terminal-pic--second,
+  .main__trading-terminal-pic--third {
+    right: 2%;
+  }
+  .main__download-section {
+    padding-right: 0;
+  }
+  .main__colored-squares-section {
+    justify-content: center;
+    margin-right: 0;
+  }
+  .pricing__section {
+    padding: 0;
+    padding-top: 40px;
+  }
+  .pricing-table td {
+    width: 20%;
+  }
+  .main__more-download-section {
+    padding-bottom: 0;
+  }
+  .main__more-info-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .main__more-info__text-section {
+    padding-left: 5%;
+    padding-right: 5;
+  }
+  .apix__exchange__little-text {
+    width: 48%;
+  }
+  .apix__section-container {
+    margin-right: 10%;
+  }
+  .h1__title {
+    top: 100px;
+  }
+  .apix__exchange__integrate-pic {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main__trading-panel-pic--mobile {
+    display: block;
+  }
+  .main__trading-panel-pic {
+    width: 90%;
+    position: relative;
+    right: 138px;
+  }
+  .apix__exchange__integrate-container {
+    padding-bottom: 50px;
+  }
+  .apix__header-container {
+    padding-top: 20px;
+  }
+  .main__trading-terminal-pic--mobile,
+  .main__trading-terminal-pic2--mobile,
+  .main__trading-terminal-pic3--mobile {
+    display: block;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  .main__more-download-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .main__trading-terminal-pic2--mobile {
+    top: -350px;
+    right: -23px;
+    z-index: -2;
+    mix-blend-mode: color-dodge;
+  }
+  .main__h1-section__button {
+    left: calc(50% - 106px);
+    top: 650px;
+    position: absolute;
+  }
+  .main__trading-terminal-pic3--mobile {
+    top: -770px;
+    z-index: -3;
+  }
+  body {
+    background-image: url("../img/apix_bg_mobile.svg");
+    background-size: contain;
+    background-position: 0 57px !important;
+  }
+  .h1__pics-section {
+    padding-top: 70px;
+    height: 550px;
+    margin-bottom: 0;
+    position: relative;
+  }
+  body {
+    background-position: 0 70px;
+  }
+  aside {
+    display: none;
+  }
+  .apix__exchange-integrations__signals {
+    display: none;
+  }
+  .main__h2 {
+    font-size: 24px;
+  }
+  .main__h1 {
+    font-size: 45px;
+    margin-top: 8px;
+  }
+  .main__h1-section {
+    overflow: hidden;
+  }
+  .apix__exchange__huge-gap {
+    margin-top: 50px;
+  }
+  .apix__section-container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .apix__exchange__text {
+    width: 100%;
+    text-align: justify;
+  }
+  .apix__exchange__text-gap {
+    margin-top: 50px;
+  }
+  .apix__exchange__integrate-pic {
+    width: 100%;
+  }
+  .apix__section-container {
+    padding-top: 50px;
+  }
+  .pricing-table th {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .pricing-table td {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 0;
+  }
+  .main__heading-text {
+    white-space: normal;
+    font-size: 20px;
+  }
+  .main-terminal-pic {
+    position: relative;
+    top: -100px;
+    left: -163px;
+    max-width: 170%;
+  }
+  .main__text {
+    font-size: 22px;
+    white-space: normal;
+  }
+  .main__little-text {
+    font-size: 14px;
+  }
+  .main__little-gap {
+    margin-top: 20px;
+  }
+  .main__h1-section__button {
+    width: 212px;
+    padding: 22px 20px;
+  }
+  .main__h1-section {
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-top: 104px;
+    padding-bottom: 50px;
+  }
+  .main__text-section {
+    gap: 20px;
+    padding-left: 24px;
+  }
+  .main__download-section {
+    padding-bottom: 100px;
+    padding-top: 0;
+    padding-left: 0;
+    overflow: hidden;
+  }
+  .main__more-info-section {
+    padding-bottom: 100px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .main__download__buttons--item {
+    width: 100%;
+    border-radius: 40px;
+  }
+  .download__additional-text-section {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .pricing__header {
+    padding-top: 100px;
+  }
+  .pricing-table {
+    width: 100%;
+  }
+  .main__download__computer-section {
+    display: none;
+  }
+
+  .main__trading-terminal-pic,
+  .main__trading-terminal-pic--second,
+  .main__trading-terminal-pic--third {
+    display: none;
+  }
+  .main__trading-terminal-pic {
+    width: 684px;
+    background-size: contain;
+  }
+  .main__text-section--text {
+    white-space: nowrap;
+    width: 332px;
+    z-index: 2;
+  }
+  .main__text-headers {
+    font-size: 20px;
+  }
+  .main__trading-panel--elipse {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(25px);
+  }
+  .pricing-table__table-cell {
+    border-left: 1px solid #596078;
+  }
+  .pricing-table th {
+    border-left: 1px solid #596078;
+  }
+  .pricing-table__header-cell--blank {
+    border: 0 !important;
+  }
+  .pricing-table__table-cell--last-row:nth-child(2),
+  .pricing-table__table-cell--last-row:nth-child(3) {
+    display: none !important;
+  }
+  .pricing-table__headers--lower {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 62px;
+    transition: all 0.5s ease;
+  }
+  .main__colored-squares--item {
+    flex: 0 0 100%;
+  }
+  .pricing-table__header-cell {
+    cursor: pointer;
+  }
+  .h1__title {
+    top: 30px;
+  }
+}

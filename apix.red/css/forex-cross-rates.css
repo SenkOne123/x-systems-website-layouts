@@ -1,0 +1,43 @@
+@import url("../css/clear.css");
+@import url("../css/header.css");
+@import url("../css/footer.css");
+@import url("../css/side_panel.css");
+@import url("../css/forex-tools.css");
+@import url("../css/main.css");
+
+@media screen and (max-width: 1440px) {
+  .h1__title {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .h1__title {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  body {
+    background-position: 0 159px;
+  }
+  .forex-tools__big-section {
+    margin-right: 0;
+  }
+  .apix__section-container {
+    margin-right: 9%;
+  }
+  .apix__section-container {
+    padding-right: 0;
+  }
+  .forex-tools__description-gap {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .h1__title {
+    width: 100%;
+    font-size: 35px;
+  }
+  .forex-tools__h2 {
+    font-size: 28px;
+  }
+}

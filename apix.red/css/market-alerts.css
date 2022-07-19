@@ -1,0 +1,215 @@
+@import url("../css/clear.css");
+@import url("../css/header.css");
+@import url("../css/footer.css");
+@import url("../css/side_panel.css");
+@import url("../css/forex-tools.css");
+@import url("../css/main.css");
+
+.market-alerts__alert-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.market-alerts__signal-pic {
+  height: 349px;
+}
+.market-alerts__h3-headers {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 160%;
+}
+.apex__exchange__section-text {
+  margin-top: 15px;
+}
+.market-alerts__text-section {
+  width: 45%;
+}
+.market-alerts__text-gap {
+  margin-top: 30px;
+}
+.market-alerts__dashboard__main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.market-alerts__dashboard__main-section-items {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+.market-alerts__pics {
+  display: flex;
+  position: relative;
+  width: 500px;
+  height: 275px;
+}
+.market-alerts__item-text-section {
+  flex: 1;
+}
+.market-alerts__pics--support {
+  background: url("../img/dashboard_support.svg") no-repeat;
+}
+.market-alerts__support-scale {
+  position: absolute;
+  left: 115px;
+  top: 250px;
+  animation: support 3s infinite;
+  animation-timing-function: linear;
+}
+.market-alerts__pics--buyers {
+  background: url("../img/dashboard_buyers.svg") no-repeat;
+}
+.market-alerts__pics--stochastic {
+  background: url("../img/dashboard_stochastic.svg") no-repeat;
+  background-size: contain;
+}
+.market-alerts__pics--rci-cci-text {
+  position: absolute;
+  bottom: 60px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  left: 190px;
+  animation: pulsate 2s infinite;
+  animation-timing-function: linear;
+}
+.market-alerts__pics--cci {
+  left: 260px;
+}
+.market-alerts__pics--trends {
+  background: url("../img/dashboard_trends.svg") no-repeat;
+  background-size: contain;
+}
+.market-alerts__pics--trends-text {
+  position: absolute;
+  top: 150px;
+  left: 335px;
+  color: #fff;
+  font-size: 20px;
+  animation: pulsate 3s infinite;
+  animation-timing-function: linear;
+  font-weight: 600;
+}
+.market-alerts__pics--volatility {
+  background: url("../img/dashboard_volatility.svg") no-repeat;
+}
+.market-alerts__volatility-scale {
+  position: absolute;
+  bottom: 10px;
+  width: 40px;
+  height: 13px;
+  right: 25px;
+  border-top: 2px solid #52d9fa;
+  filter: drop-shadow(0 0 10px #2d9cdb);
+  background: #2d9cdb;
+  border-radius: 0 0 5px 5px;
+  animation: volatility 3s infinite;
+  animation-timing-function: linear;
+}
+@keyframes volatility {
+  100% {
+    height: 13px;
+  }
+  50% {
+    height: 215px;
+  }
+  0% {
+    height: 0;
+  }
+}
+@keyframes support {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-190px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes pulsate {
+  50% {
+    text-shadow: 0 0 20px #fff;
+  }
+}
+@media screen and (max-width: 1440px) {
+  aside {
+    display: none;
+  }
+  .apix__section-container {
+    margin: 0 10%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .market-alerts__alert-section {
+    display: block;
+  }
+  .market-alerts__text-section {
+    width: 100%;
+  }
+  .market-alerts__signal-pic {
+    width: 100%;
+  }
+  .forex-tools__calendar-h1-section {
+    padding-top: 50px;
+  }
+  .forex-tools__description-gap {
+    margin-top: 80px;
+  }
+  .apix__section-container {
+    padding-top: 0;
+  }
+  .market-alerts__dashboard__main-section-items {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .market-alerts__dashboard__main-section {
+    gap: 60px;
+  }
+  .market-alerts__pics {
+    width: 350px;
+    margin: 0 auto;
+  }
+  .market-alerts__pics--support,
+  .market-alerts__pics--buyers,
+  .market-alerts__pics--stochastic,
+  .market-alerts__pics--trends,
+  .market-alerts__pics--volatility {
+    background-size: contain;
+  }
+  .market-alerts__support-scale {
+    left: 76px;
+    top: 180px;
+  }
+  .market-alerts__pics--rci-cci-text {
+    font-size: 14px;
+    bottom: 123px;
+    left: 130px;
+  }
+  .market-alerts__pics--cci {
+    left: 190px;
+  }
+  .market-alerts__pics--trends-text {
+    font-size: 14px;
+    left: 235px;
+    top: 106px;
+  }
+  .market-alerts__volatility-scale {
+    bottom: 90px;
+    right: 14px;
+    width: 28px;
+  }
+  @keyframes volatility {
+    100% {
+      height: 13px;
+    }
+    50% {
+      height: 150px;
+    }
+    0% {
+      height: 0;
+    }
+  }
+}

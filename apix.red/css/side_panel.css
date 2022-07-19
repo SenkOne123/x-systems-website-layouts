@@ -1,0 +1,74 @@
+.apix__side-panel__container {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 275px;
+  right: 0;
+  padding: 110px 25px 0 25px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #d6ddee;
+  background: radial-gradient(272.41% 100% at 0% 0%, #374058 0%, #2a3145 100%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: -10px 0px 60px rgba(28, 33, 47, 0.12);
+  height: 100%;
+}
+.apix__side-panel__main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.apix__side-panel__input {
+  height: 40px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #5c6376;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 100%;
+  color: #5c6376;
+}
+.apix__side-panel__button-ok {
+  background: linear-gradient(
+    271.75deg,
+    #fd4b6c 0%,
+    #f82a50 0.01%,
+    #fd998a 100%
+  );
+  border-radius: 8px;
+  height: 42px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #fff;
+}
+.apix__side-panel__button-google {
+  height: 42px;
+  border-radius: 8px;
+}
+.apix__side-panel__terms-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.apix__side-panel__checkbox {
+}
+.apix__side-panel__terms--text {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.apix__side-panel__terms__text-highlight {
+  color: #fd4b6c;
+}
+.apix__side-panel__follow-us-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 40px;
+}
+.apix__side-panel__socials-section {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,105 @@
+@import url("../css/clear.css");
+@import url("../css/header.css");
+@import url("../css/footer.css");
+@import url("../css/side_panel.css");
+@import url("../css/forex-tools.css");
+@import url("../css/news-carousel.css");
+@import url("../css/main.css");
+
+body {
+  background-position: -275px 70px;
+  background-size: cover;
+}
+.news__container {
+  padding-top: 35px;
+  margin-left: 22%;
+  margin-right: 22%;
+}
+.apix__main-container {
+  margin-right: 275px;
+}
+.news__text-gap {
+  margin-top: 30px !important;
+}
+.news__headers-gap {
+  margin-top: 40px !important;
+}
+.news__headers {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 32px;
+}
+.news__little-header {
+  font-size: 20px;
+}
+.news__ul {
+  list-style: none;
+}
+.news__ul > li::before {
+  content: "\2022";
+  color: #d6ddee;
+  font-weight: 400;
+  width: 1em;
+}
+.apix__blockquote {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+  text-align: justify;
+  font-style: italic;
+  padding-bottom: 10px;
+  margin-top: 80px;
+}
+.apix__blockquote::before {
+  position: absolute;
+  content: url("../img/blockquote_start.svg");
+  top: -20px;
+  left: -60px;
+}
+.apix__blockquote::after {
+  position: absolute;
+  content: url("../img/blockquote_end.svg");
+  bottom: -20px;
+  right: -40px;
+}
+.apix__figcaption {
+  position: relative;
+  padding-top: 10px;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+.apix__figcaption::before {
+  content: "";
+  width: 107px;
+  border-top: 1px solid #fd4b6c;
+  position: absolute;
+  top: 0;
+}
+.apix__news__ol {
+  list-style-type: decimal;
+  padding-left: 20px !important;
+  padding-right: 10px !important;
+}
+.apix__news__pic {
+  margin-top: 70px;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 767px) {
+  .apix__main-container {
+    margin-right: 0;
+  }
+  .news__container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .news__more__carousel-item {
+    width: 300px;
+  }
+  .forex-tools__calendar-h1-section {
+    padding-top: 20px;
+  }
+}
